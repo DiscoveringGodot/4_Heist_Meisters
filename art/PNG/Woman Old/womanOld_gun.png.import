@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/womanOld_gun.png-4acfbeeffc608c86608d652623b35baa.stex"
+
+[deps]
+
+source_file="res://art/PNG/Woman Old/womanOld_gun.png"
+source_md5="13f60be2486d73262bb0896cc5da14fa"
+
+dest_files=[ "res://.import/womanOld_gun.png-4acfbeeffc608c86608d652623b35baa.stex" ]
+dest_md5="8d53e62c64e3822be6572c7d700e2fd8"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

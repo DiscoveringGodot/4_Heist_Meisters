@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/survivor2_machine.png-0a6a4dda5168bf9e99343728c0706fe6.stex"
+
+[deps]
+
+source_file="res://art/PNG/Survivor 2/survivor2_machine.png"
+source_md5="39b7e43c16093aee5c48233ff38fe544"
+
+dest_files=[ "res://.import/survivor2_machine.png-0a6a4dda5168bf9e99343728c0706fe6.stex" ]
+dest_md5="f77ef9cdbc35c31878452f32b35d4220"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

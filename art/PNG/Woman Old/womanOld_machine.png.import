@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/womanOld_machine.png-88dda96ae1bd325319a1666f512941bf.stex"
+
+[deps]
+
+source_file="res://art/PNG/Woman Old/womanOld_machine.png"
+source_md5="158ec768ff319755a5a976bb5efa6a50"
+
+dest_files=[ "res://.import/womanOld_machine.png-88dda96ae1bd325319a1666f512941bf.stex" ]
+dest_md5="dfb102e87fa5b617462180792138f58f"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

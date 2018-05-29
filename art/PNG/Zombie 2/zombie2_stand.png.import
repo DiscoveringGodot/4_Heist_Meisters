@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/zombie2_stand.png-7a73075180d96d7f4a9cc26ee9bf06f3.stex"
+
+[deps]
+
+source_file="res://art/PNG/Zombie 2/zombie2_stand.png"
+source_md5="9d2c2dbaa18c9fc093425f148ca4e990"
+
+dest_files=[ "res://.import/zombie2_stand.png-7a73075180d96d7f4a9cc26ee9bf06f3.stex" ]
+dest_md5="daf21611b9ad8afedbb2adb3ebd54a05"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

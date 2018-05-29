@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/manBrown_machine.png-6e20ccf51f7834bb1e820f32e7e5f29c.stex"
+
+[deps]
+
+source_file="res://art/PNG/Man Brown/manBrown_machine.png"
+source_md5="20ef9d8bc101aa9bec32c3b2ae546594"
+
+dest_files=[ "res://.import/manBrown_machine.png-6e20ccf51f7834bb1e820f32e7e5f29c.stex" ]
+dest_md5="5de8672fba69e6440b061dbe679e93fa"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

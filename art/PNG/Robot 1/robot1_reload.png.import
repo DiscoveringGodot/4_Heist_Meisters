@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/robot1_reload.png-d97537f722befcc3c6c56dfa093639a2.stex"
+
+[deps]
+
+source_file="res://art/PNG/Robot 1/robot1_reload.png"
+source_md5="a8822fcf45288d45a9ef4646c5797e4a"
+
+dest_files=[ "res://.import/robot1_reload.png-d97537f722befcc3c6c56dfa093639a2.stex" ]
+dest_md5="b86f38fd52fff6b4485482486d2b990c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

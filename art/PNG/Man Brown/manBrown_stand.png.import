@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/manBrown_stand.png-7a1cd8752558dabce3d597fcb1dddb52.stex"
+
+[deps]
+
+source_file="res://art/PNG/Man Brown/manBrown_stand.png"
+source_md5="9062c004681756e48adfc8fd3ac92a7b"
+
+dest_files=[ "res://.import/manBrown_stand.png-7a1cd8752558dabce3d597fcb1dddb52.stex" ]
+dest_md5="5db2355d783705fae022034257cd9a6a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

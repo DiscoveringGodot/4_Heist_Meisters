@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/hitman1_stand.png-f30bd3d91b43996835b2365a15906dbc.stex"
+
+[deps]
+
+source_file="res://art/PNG/Hitman 1/hitman1_stand.png"
+source_md5="2270d70229eefb0670ee40d5d6bbb647"
+
+dest_files=[ "res://.import/hitman1_stand.png-f30bd3d91b43996835b2365a15906dbc.stex" ]
+dest_md5="77021cd73aac1a0e045d9f8d53e8476c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

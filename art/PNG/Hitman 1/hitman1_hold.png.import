@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/hitman1_hold.png-751083bfd8311a33a9ef19240bbf6f3b.stex"
+
+[deps]
+
+source_file="res://art/PNG/Hitman 1/hitman1_hold.png"
+source_md5="620f82e3e2a3fde9ded5e609e59e32b3"
+
+dest_files=[ "res://.import/hitman1_hold.png-751083bfd8311a33a9ef19240bbf6f3b.stex" ]
+dest_md5="02d280ebfd35549038a6a76a9b5609be"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

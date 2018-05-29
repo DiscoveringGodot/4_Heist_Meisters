@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/survivor1_stand.png-1e6dc2ab8c78b13bf6761ef9cf6bee02.stex"
+
+[deps]
+
+source_file="res://art/PNG/Survivor 1/survivor1_stand.png"
+source_md5="6300af71e09fb44c0d5767c4e7d63493"
+
+dest_files=[ "res://.import/survivor1_stand.png-1e6dc2ab8c78b13bf6761ef9cf6bee02.stex" ]
+dest_md5="e9431806f8d253829b124061e7904205"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

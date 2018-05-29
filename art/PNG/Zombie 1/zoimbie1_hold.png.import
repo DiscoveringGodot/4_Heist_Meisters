@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/zoimbie1_hold.png-f45d8cfcd7a940d0d40e00cec0bb9937.stex"
+
+[deps]
+
+source_file="res://art/PNG/Zombie 1/zoimbie1_hold.png"
+source_md5="d35fd6bfb4e0f02149bb37c38e7e7d89"
+
+dest_files=[ "res://.import/zoimbie1_hold.png-f45d8cfcd7a940d0d40e00cec0bb9937.stex" ]
+dest_md5="5db550ea2699a08d15a8a6acd2bb1db9"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/manRed_silencer.png-8854da04bbb91a29f28d5a9dd875b170.stex"
+
+[deps]
+
+source_file="res://art/PNG/Man Red/manRed_silencer.png"
+source_md5="713f2c1518f2f09e79ec0193cfc5f269"
+
+dest_files=[ "res://.import/manRed_silencer.png-8854da04bbb91a29f28d5a9dd875b170.stex" ]
+dest_md5="b8dece6c7b750fbfc61468cf953f3ddb"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

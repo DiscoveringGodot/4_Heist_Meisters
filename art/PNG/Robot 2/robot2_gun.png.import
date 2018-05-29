@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/robot2_gun.png-1ac4f004c99b9bc5e9fbaf4ce7815853.stex"
+
+[deps]
+
+source_file="res://art/PNG/Robot 2/robot2_gun.png"
+source_md5="067395cfddc08538a78fb6a693a7aeb6"
+
+dest_files=[ "res://.import/robot2_gun.png-1ac4f004c99b9bc5e9fbaf4ce7815853.stex" ]
+dest_md5="f46c77690e0b1bed289b2cee3a4d314c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
