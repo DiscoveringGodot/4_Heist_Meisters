@@ -27,9 +27,9 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-accel = 10
+accel = 300
 friction = 0.2
-max_speed = 40
+max_speed = 1500
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -38,19 +38,11 @@ animation = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
 position = Vector2( -1, 0 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="2"]
-
-enabled = true
-exclude_parent = true
-cast_to = Vector2( 500, 0 )
-collision_mask = 1
-
-[node name="Light2D" type="Light2D" parent="." index="3"]
+[node name="Light2D" type="Light2D" parent="." index="2"]
 
 enabled = false
 editor_only = false

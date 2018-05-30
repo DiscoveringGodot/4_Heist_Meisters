@@ -1,17 +1,15 @@
 extends KinematicBody2D
 
 #variables
-export var accel = 10
+export var accel = 300
 export var friction = .1
 var motion = Vector2()
-export var max_speed = 1
+export var max_speed = 1500
 var torch = false
 
 
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	pass
 
 func _process(delta):
@@ -45,7 +43,7 @@ func _process(delta):
 			torch = false
 	
 	
-	move_and_collide(motion)
+	move_and_slide(motion)
 	
 	
 	

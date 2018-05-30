@@ -119,12 +119,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 2
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -196615, 1, 0, -196614, 1, 0, -196613, 1, 0, -196612, 1, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -131079, 1, 0, -131078, 1, 0, -131077, 0, 0, -131076, 0, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 1, 0, -196604, 1, 0, -65543, 1, 0, -65542, 1, 0, -65541, 1, 0, -65540, 1, 0, -65539, 1, 0, -65538, 1, 0, -65537, 1, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 1, 0, -131066, 1, 0, -6, 1, 0, -5, 1, 0, -4, 1, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 0, 0, -65531, 0, 0, -65530, 1, 0, 65529, 1, 0, 65530, 1, 0, 65531, 1, 0, 65532, 0, 0, 65533, 0, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 0, 0, 3, 0, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 131065, 1, 0, 131066, 1, 0, 131067, 0, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 0, 0, 65537, 0, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 196601, 1, 0, 196602, 0, 0, 196603, 1, 0, 196604, 1, 0, 196605, 1, 0, 196607, 1, 0, 131072, 0, 0, 131073, 1, 0, 131074, 1, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 262136, 1, 0, 262137, 1, 0, 262138, 1, 0, 262139, 1, 0, 262140, 1, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 0, 0, 196610, 0, 0, 196611, 1, 0, 196612, 1, 0, 262148, 1, 0 )
-_sections_unfolded = [ "Cell", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Cell", "Collision", "Visibility", "Z Index" ]
 
 [node name="walls" type="TileMap" parent="." index="1"]
 
@@ -148,8 +148,9 @@ tile_data = PoolIntArray( -262152, 0, 0, -262151, 2, 0, -262150, 2, 0, -262149, 
 
 [node name="Player" parent="." index="2" instance=ExtResource( 3 )]
 
-_sections_unfolded = [ "Transform", "Visibility" ]
-max_speed = 1
+collision_layer = 5
+collision_mask = 5
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
 
@@ -195,17 +196,21 @@ texture = ExtResource( 4 )
 occluder = SubResource( 2 )
 light_mask = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="pillar" index="1"]
+[node name="wall" type="StaticBody2D" parent="pillar" index="1"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 4
+collision_mask = 5
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pillar/wall" index="0"]
 
 shape = SubResource( 3 )
 
@@ -215,11 +220,15 @@ environment = SubResource( 4 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
 
-color = Color( 0.277344, 0.261093, 0.261093, 1 )
+visible = false
+color = Color( 0.234375, 0.234375, 0.234375, 1 )
 
 [node name="NPC" parent="." index="7" instance=ExtResource( 5 )]
 
-position = Vector2( -3.13699, -102.838 )
-rotation = 1.5708
+position = Vector2( -275.996, -120.757 )
+rotation = 0.0488692
+collision_layer = 5
+collision_mask = 5
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
 
 
