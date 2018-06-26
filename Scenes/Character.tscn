@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Character.gd" type="Script" id=1]
+[ext_resource path="res://GFX/PNG/Man Red/manRed_stand.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 9.0
+height = 24.0
+
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = false
+cull_mode = 1
+polygon = PoolVector2Array( -6.12534, -21.217, 2.22794, -21.217, 6.21182, -16.8475, 8.26801, -8.10873, 9.42462, -5.15295, 11.4808, -2.4542, 12.1234, 1.01563, 10.5812, 2.8148, 8.78205, 7.0557, 7.36843, 11.8106, 6.72586, 16.9511, 2.35645, 21.192, -6.25386, 21.192, -9.59517, 18.7503, -11.6514, 12.4532, -12.0369, 7.31272, -14.2216, 3.07182, -14.3501, -2.4542, -11.9084, -7.08063, -11.3943, -13.8918, -10.6233, -17.1046 )
+
+[node name="Character" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.5
+script = ExtResource( 1 )
+_sections_unfolded = [ "collision" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( -2, 0 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="2"]
+
+occluder = SubResource( 2 )
+light_mask = 1
+
+

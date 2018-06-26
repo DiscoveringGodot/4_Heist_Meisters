@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://GFX/PNG/Tiles/tile_42.png" type="Texture" id=1]
+[ext_resource path="res://GFX/PNG/Tiles/tile_43.png" type="Texture" id=2]
+[ext_resource path="res://GFX/PNG/Tiles/tile_44.png" type="Texture" id=3]
+[ext_resource path="res://GFX/PNG/Tiles/tile_45.png" type="Texture" id=4]
+[ext_resource path="res://GFX/PNG/Tiles/tile_46.png" type="Texture" id=5]
+[ext_resource path="res://GFX/PNG/Tiles/tile_47.png" type="Texture" id=6]
+[ext_resource path="res://GFX/PNG/Tiles/tile_69.png" type="Texture" id=7]
+[ext_resource path="res://GFX/PNG/Tiles/tile_70.png" type="Texture" id=8]
+[ext_resource path="res://GFX/PNG/Tiles/tile_71.png" type="Texture" id=9]
+[ext_resource path="res://GFX/PNG/Tiles/tile_72.png" type="Texture" id=10]
+[ext_resource path="res://GFX/PNG/Tiles/tile_73.png" type="Texture" id=11]
+[ext_resource path="res://GFX/PNG/Tiles/tile_74.png" type="Texture" id=12]
+
+[node name="Floor Tiles" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Visibility" ]
+
+[node name="WoodLight1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodLight2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 160, 64 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodLight3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 64, 160 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodLight4" type="Sprite" parent="." index="3"]
+
+position = Vector2( 160, 160 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodLight5" type="Sprite" parent="." index="4"]
+
+position = Vector2( 256, 64 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodLight6" type="Sprite" parent="." index="5"]
+
+position = Vector2( 256, 160 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodDark1" type="Sprite" parent="." index="6"]
+
+position = Vector2( 64, 256 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodDark2" type="Sprite" parent="." index="7"]
+
+position = Vector2( 160, 256 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodDark3" type="Sprite" parent="." index="8"]
+
+position = Vector2( 256, 256 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodDark4" type="Sprite" parent="." index="9"]
+
+position = Vector2( 64, 352 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodDark5" type="Sprite" parent="." index="10"]
+
+position = Vector2( 160, 352 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="WoodDark6" type="Sprite" parent="." index="11"]
+
+position = Vector2( 256, 352 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Offset" ]
+
+
