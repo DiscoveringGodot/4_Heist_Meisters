@@ -297,6 +297,8 @@ enabled = true
 
 [node name="NPCs" type="Node" parent="." index="8"]
 
+editor/display_folded = true
+
 [node name="Soldier" parent="NPCs" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 640, 256 )
@@ -330,8 +332,8 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 
 script = ExtResource( 11 )
 
-[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
 
 

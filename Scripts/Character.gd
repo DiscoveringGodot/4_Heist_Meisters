@@ -4,5 +4,3 @@ const SPEED = 10
 const MAX_SPEED = 200
 const FRICTION = .1
 
-func _ready():
-	
