@@ -3,8 +3,10 @@ extends "res://Scripts/Character.gd"
 var motion = Vector2()
 var disguised = false
 var velocity = 1
+signal vision_mode_change
 
 func _ready():
+	connect("vision_mode_change", get_node("/root/Level1/CanvasModulate"), "vision_mode_change")
 	reveal()
 	
 func _process(delta):
@@ -53,14 +55,18 @@ func update_motion(delta):
 		motion.x = lerp(motion.x, 0, FRICTION)
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_select"):
-		if $Light2D.enabled == true:
-			$Light2D.enabled = false
-		else:
-			$Light2D.enabled = true
-
 	if Input.is_action_just_pressed("ui_use"):
 		if disguised:
 			reveal()
 		else:
 			disguise()
+	
+	if Input.is_action_just_pressed("ui_select"):
+		if night_vision:
+			night_vision = false
+		else:
+			night_vision = true
+
+		emit_signal("vision_mode_change", night_vision)
+		get_tree().call_group("npc", "vision_mode_change")
+		

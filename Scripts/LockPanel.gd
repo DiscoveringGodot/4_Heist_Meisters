@@ -3,7 +3,7 @@ extends Popup
 onready var door = (get_parent().get_parent())
 onready var display = $VSplitContainer/CenterContainer/Display
 onready var light = $VSplitContainer/CenterContainer2/GridContainer/Light
-var guess =["x","x","x","x"]
+var guess =[]
 func _ready():
 	reset_lock()
 

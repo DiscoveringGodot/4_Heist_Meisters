@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/SecurityCamera.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/DetectPlayer.gd" type="Script" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=3]
 [ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=4]
 
@@ -40,7 +40,9 @@ scale = Vector2( 0.46542, 0.5 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Body" type="KinematicBody2D" parent="." index="1"]
+[node name="Body" type="KinematicBody2D" parent="." index="1" groups=[
+"npc",
+]]
 
 rotation = -0.523599
 input_pickable = false

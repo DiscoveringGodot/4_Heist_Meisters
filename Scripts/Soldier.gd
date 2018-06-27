@@ -1,4 +1,4 @@
-extends "res://Scripts/NPC.gd"
+extends "res://Scripts/DetectPlayer.gd"
 
 var motion = Vector2()
 var possible_destinations = []

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tilesets/floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilesets/furniture.tres" type="TileSet" id=2]
@@ -8,9 +8,10 @@
 [ext_resource path="res://Scenes/Locked_Door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=7]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Soldier.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scripts/Combination.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/CanvasModulate.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Soldier.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Combination.gd" type="Script" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -63,7 +64,7 @@ collision_layer = 8
 collision_mask = 5
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 131074, -1610612735, 0, 131076, 1610612736, 0, 196610, -1610612734, 0, 262146, -1610612734, 0, 262150, -1073741816, 0, 327682, -1610612733, 0, 327684, 0, 0, 327693, -1610612729, 0, 393230, -1073741824, 0, 458766, -1073741815, 0, 589831, 1610612739, 0, 589832, 1610612737, 0, 589833, -1073741815, 0, 655372, 1, 0, 655373, 2, 0, 655374, 3, 0, 655375, 4, 0, 786439, -1610612729, 0, 786442, -1073741815, 0, 786445, 10, 0, 851974, -1610612736, 0, 917512, 0, 0, 917514, 0, 0, 917516, 1610612736, 0, 917518, 1610612736, 0, 983052, 7, 0, 1048589, 0, 0 )
+tile_data = PoolIntArray( 131074, -1610612735, 0, 131076, 1610612736, 0, 196610, -1610612734, 0, 262146, -1610612734, 0, 262150, -1073741816, 0, 327682, -1610612733, 0, 327684, 0, 0, 327693, -1610612729, 0, 393230, -1073741824, 0, 458766, -1073741815, 0, 589831, 1610612739, 0, 589832, 1610612737, 0, 589833, -1073741815, 0, 655372, 1, 0, 655373, 2, 0, 655374, 3, 0, 655375, 4, 0, 786439, -1610612729, 0, 786445, 10, 0, 851974, -1610612736, 0, 917512, 0, 0, 917514, 0, 0, 917516, 1610612736, 0, 917518, 1610612736, 0, 983052, 7, 0, 1048589, 0, 0 )
 _sections_unfolded = [ "Collision", "Occluder", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -115,12 +116,10 @@ rotation = -1.5708
 
 [node name="SecurityCamera3" parent="SecurityCameras" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 700, 700 )
+position = Vector2( 700, 750 )
 rotation = 3.14159
 
 [node name="Doors" type="Node" parent="." index="3"]
-
-editor/display_folded = true
 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 5 )]
 
@@ -196,8 +195,10 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
 
+visible = false
 position = Vector2( -64, 0 )
-color = Color( 0.574642, 0.595532, 0.658203, 1 )
+color = Color( 0.0121384, 0.0121384, 0.144531, 1 )
+script = ExtResource( 9 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="7"]
 
@@ -295,45 +296,41 @@ _sections_unfolded = [ "Transform" ]
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="NPCs" type="Node" parent="." index="8"]
+[node name="Soldiers" type="Node" parent="." index="8"]
 
-editor/display_folded = true
-
-[node name="Soldier" parent="NPCs" index="0" instance=ExtResource( 9 )]
+[node name="Soldier" parent="Soldiers" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 640, 256 )
 collision/safe_margin = 0.08
 
-[node name="Soldier2" parent="NPCs" index="1" instance=ExtResource( 9 )]
+[node name="Soldier2" parent="Soldiers" index="1" instance=ExtResource( 10 )]
 
 position = Vector2( 2464, 160 )
 collision/safe_margin = 0.08
 
-[node name="Soldier3" parent="NPCs" index="2" instance=ExtResource( 9 )]
+[node name="Soldier3" parent="Soldiers" index="2" instance=ExtResource( 10 )]
 
 position = Vector2( 1152, 448 )
 collision/safe_margin = 0.08
 
-[node name="Soldier4" parent="NPCs" index="3" instance=ExtResource( 9 )]
+[node name="Soldier4" parent="Soldiers" index="3" instance=ExtResource( 10 )]
 
 position = Vector2( 512, 704 )
 collision/safe_margin = 0.08
 
 [node name="Computers" type="Node" parent="." index="9"]
 
-editor/display_folded = true
-
-[node name="Computer" parent="Computers" index="0" instance=ExtResource( 10 )]
+[node name="Computer" parent="Computers" index="0" instance=ExtResource( 11 )]
 
 position = Vector2( 864, 352 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 
 [node name="Combination" type="Node" parent="." index="10"]
 
-script = ExtResource( 11 )
-
-[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
+script = ExtResource( 12 )
 
 [connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
 
 
