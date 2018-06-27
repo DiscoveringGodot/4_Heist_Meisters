@@ -5,11 +5,12 @@
 [ext_resource path="res://GFX/PNG/Hitman 1/hitman1_stand.png" type="Texture" id=3]
 [ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=4]
 
-
-[node name="Player" instance=ExtResource( 1 )]
+[node name="Player" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 0.291985, 1.45994 )
+collision/safe_margin = 1.0
 script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "collision" ]
 
 [node name="Sprite" parent="." index="0"]
 
@@ -17,7 +18,7 @@ texture = ExtResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="." index="2"]
 
-position = Vector2( 16.5807, 0 )
+position = Vector2( 19.708, -1.45994 )
 enabled = false
 editor_only = false
 texture = ExtResource( 4 )
@@ -40,5 +41,9 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Material", "Range", "Shadow", "Transform", "Visibility" ]
+
+[node name="LightOccluder2D" parent="." index="3"]
+
+position = Vector2( 0.214645, -0.214638 )
 
 

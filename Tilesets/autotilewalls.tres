@@ -314,11 +314,6 @@ closed = true
 cull_mode = 0
 polygon = PoolVector2Array(  )
 
-[sub_resource type="ConvexPolygonShape2D" id=53]
-
-custom_solver_bias = 0.0
-points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 64, 64, 0, 64 )
-
 [sub_resource type="ConvexPolygonShape2D" id=54]
 
 custom_solver_bias = 0.0
@@ -569,6 +564,11 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
+[sub_resource type="ConvexPolygonShape2D" id=104]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
 [resource]
 
 0/name = "Sprite"
@@ -589,11 +589,6 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 0/occluder = SubResource( 52 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shapes = [ {
-"autotile_coord": Vector2( 1, 4 ),
-"one_way": true,
-"shape": SubResource( 53 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
 "autotile_coord": Vector2( 2, 4 ),
 "one_way": false,
 "shape": SubResource( 54 ),
@@ -842,6 +837,11 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 "autotile_coord": Vector2( 8, 4 ),
 "one_way": false,
 "shape": SubResource( 103 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 4 ),
+"one_way": false,
+"shape": SubResource( 104 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 _sections_unfolded = [ "0" ]

@@ -1,11 +1,31 @@
 extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
+var disguised = false
+var velocity = 1
 
+func _ready():
+	reveal()
+	
 func _process(delta):
 	update_motion(delta)
-	update_actions()
-	move_and_slide(motion)
+	move_and_slide(motion * velocity)
+
+func reveal():
+	collision_layer = 1
+	$Sprite.texture = load("res://GFX/PNG/Hitman 1/hitman1_stand.png")
+	$LightOccluder2D.occluder = load("res://Scenes/CharacterOcclusion.tres")
+	velocity = 1
+	disguised = false
+
+
+func disguise():
+	collision_layer = 4
+	$Sprite.texture = load("res://GFX/PNG/Tiles/tile_129.png")
+	$LightOccluder2D.occluder = load("res://Scenes/Box.Occlusion.tres")
+	velocity = 0.25
+	disguised = true
+
 
 func update_motion(delta):
 	look_at(get_global_mouse_position())
@@ -32,9 +52,15 @@ func update_motion(delta):
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)
 
-func update_actions():
+func _input(event):
 	if Input.is_action_just_pressed("ui_select"):
 		if $Light2D.enabled == true:
 			$Light2D.enabled = false
 		else:
 			$Light2D.enabled = true
+
+	if Input.is_action_just_pressed("ui_use"):
+		if disguised:
+			reveal()
+		else:
+			disguise()
