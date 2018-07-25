@@ -3,8 +3,10 @@ extends Label
 func _ready():
 	visible = false
 
-func vision_mode_change(vision_mode):
-	if vision_mode:
-		visible = true
-	else:
-		visible = false
+
+func set_night_vision_on():
+	visible = true
+
+	
+func set_night_vision_off():
+	visible = false

@@ -43,9 +43,10 @@ func _on_Computer_input_event(viewport, event, shape_idx):
 		$Light2D.enabled = true
 		terminal.popup_centered()
 
+		
+func set_night_vision_on():
+	$Label.visible = true
 
-func vision_mode_change(vision_mode):
-	if vision_mode:
-		$Label.visible = true
-	else:
-		$Label.visible = false
+
+func set_night_vision_off():
+	$Label.visible = false

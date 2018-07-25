@@ -9,8 +9,6 @@ var disguised = false
 var velocity = 1
 var night_vision = false
 
-signal vision_mode_change
-
 func _ready():
 	global.player = self
 	reveal()
@@ -23,6 +21,7 @@ func _process(delta):
 	if disguised:
 		$Label.text =  str($Timer.time_left).pad_decimals(2)
 		$Label.rect_rotation = (0 -rotation_degrees)
+
 
 func reveal():
 	collision_layer = 1
@@ -77,6 +76,7 @@ func update_motion(delta):
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)
 
+		
 func _input(event):
 	if Input.is_action_just_pressed("ui_use"):
 		if  not disguised and disguises > 0:
@@ -86,13 +86,14 @@ func _input(event):
 	
 	if Input.is_action_just_pressed("ui_select"):
 		if night_vision:
+			get_tree().call_group("npc", "set_night_vision_off")
+			get_tree().call_group("interface", "set_night_vision_off")
 			night_vision = false
 		else:
+			get_tree().call_group("npc", "set_night_vision_on")
+			get_tree().call_group("interface", "set_night_vision_on")
 			night_vision = true
 
-		get_tree().call_group("npc", "vision_mode_change", night_vision)
-		get_tree().call_group("interface", "vision_mode_change", night_vision)
-		
 
 func collect_briefcase():
 	var loot  = Node.new()

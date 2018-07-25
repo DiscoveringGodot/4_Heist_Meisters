@@ -589,9 +589,9 @@ margin_top = 60.0
 margin_right = 590.0
 margin_bottom = 120.0
 
-[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="Doors/Locked_Door3" method="_on_Computer_combination"]
 

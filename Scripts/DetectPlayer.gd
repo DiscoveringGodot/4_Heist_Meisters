@@ -13,6 +13,7 @@ signal player_seen
 func _ready():
 	connect("player_seen", get_node("/root/Level1"), "player_seen")
 
+	
 func _process(delta):
 	if player_in_fov() && player_in_los():
 		light.color = RED
@@ -46,14 +47,15 @@ func player_in_fov():
 		return false
 
 
-func vision_mode_change(vision_mode):
-	if vision_mode:
-		light.enabled = false
-	else:
-		light.enabled = true
+func set_night_vision_on():
+	light.enabled = false
 
 
-#func _draw():
+func set_night_vision_off():
+	light.enabled = true
+
+
+#func _draw():  # for debug
 #	if check_los():
 #		draw_line(Vector2(), (hit_pos - global_position).rotated(-global_rotation),WHITE, 1)
 #	else:

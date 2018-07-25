@@ -6,7 +6,6 @@ var suspicion_meter
 var canvas_modulate
 var disguise_container
 
-
 #sprite paths - MUST be set MANUALLY
 var player_sprite = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
 var player_occlusion = "res://Scenes/Occlusion/CharacterOcclusion.tres"

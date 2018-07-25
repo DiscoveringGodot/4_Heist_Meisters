@@ -7,9 +7,10 @@ func _ready():
 	global.canvas_modulate = self
 	color = DARK
 
-func vision_mode_change(night_vision):
+func set_night_vision_on():
 	$AudioStreamPlayer.play()
-	if night_vision:
-		color = NIGHTVISION
-	else:
-		color = DARK
+	color = NIGHTVISION
+
+func set_night_vision_off():  # to avoid boolean parameters
+	$AudioStreamPlayer.play()
+	color = DARK

@@ -2,7 +2,7 @@ extends Node
 
 var suspicion = 0
 var max_suspicion = 100
-var suspicion_step = 3 # how much will suspicion rise by every tick
+var suspicion_step = 1.5 # how much will suspicion rise by every tick TODO frame rate independant
 var suspicion_degrade_step = 0.25 # how much will suspicion degrade by every tick
 
 func _process(delta):
