@@ -11,6 +11,8 @@ func set_night_vision_on():
 	$AudioStreamPlayer.play()
 	color = NIGHTVISION
 
-func set_night_vision_off():  # to avoid boolean parameters
-	$AudioStreamPlayer.play()
+func set_night_vision_off():  # to avoid boolean parameters which means func does two things
+	$AudioStreamPlayer.play()  # TODO consider separate off sound
 	color = DARK
+
+# signed-off
