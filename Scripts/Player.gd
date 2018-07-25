@@ -71,20 +71,28 @@ func update_motion(delta):
 		
 func _input(event):
 	if Input.is_action_just_pressed("ui_use"):
-		if  not disguised and disguises > 0:
-			disguise()
-		else:
-			reveal()
-	
+		toggle_disguise(event)
+
 	if Input.is_action_just_pressed("ui_select"):
-		if night_vision:
-			get_tree().call_group("npc", "set_night_vision_off")
-			get_tree().call_group("interface", "set_night_vision_off")
-			night_vision = false
-		else:
-			get_tree().call_group("npc", "set_night_vision_on")
-			get_tree().call_group("interface", "set_night_vision_on")
-			night_vision = true
+		toggle_night_vision()
+
+
+func toggle_disguise():
+	if not disguised and disguises > 0:
+		disguise()
+	else:
+		reveal()
+
+		
+func toggle_night_vision():
+	if night_vision:
+		get_tree().call_group("npc", "set_night_vision_off")
+		get_tree().call_group("interface", "set_night_vision_off")
+		night_vision = false
+	else:
+		get_tree().call_group("npc", "set_night_vision_on")
+		get_tree().call_group("interface", "set_night_vision_on")
+		night_vision = true
 
 
 func collect_briefcase():
