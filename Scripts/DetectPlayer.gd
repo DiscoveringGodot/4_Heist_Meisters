@@ -8,10 +8,15 @@ const FOV_TOLERANCE = 22
 const RED = Color(1,.25,.25,1)
 const WHITE = Color(1,1,1,1)
 
+signal player_seen
+
+func _ready():
+	connect("player_seen", get_node("/root/Level1"), "player_seen")
 
 func _process(delta):
 	if player_in_fov() && player_in_los():
 		light.color = RED
+		emit_signal("player_seen")
 	else:
 		light.color = WHITE
 
@@ -41,8 +46,8 @@ func player_in_fov():
 		return false
 
 
-func vision_mode_change():
-	if night_vision:
+func vision_mode_change(vision_mode):
+	if vision_mode:
 		light.enabled = false
 	else:
 		light.enabled = true

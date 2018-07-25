@@ -18,14 +18,14 @@ func _on_Door_body_exited(body):
 
 func _on_Door_body_entered(body):
 	if not body.name == "Player"  && not animation.is_playing():
-		open()
+		open("")
 	else:
 		can_open = true
 
-func open():
+func open(value):
 	animation.play("Open")
 
 
 func _input_event(viewport, event, shape_idx):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) && can_open:
-		open()
+		open("")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GFX/PNG/Tiles/tile_129.png" type="Texture" id=1]
+
+[node name="DisguiseBox" type="Sprite" index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -13,7 +13,7 @@
 [ext_resource path="res://GFX/PNG/Tiles/tile_73.png" type="Texture" id=11]
 [ext_resource path="res://GFX/PNG/Tiles/tile_74.png" type="Texture" id=12]
 
-[node name="Floor Tiles" type="Node2D" index="0"]
+[node name="Floor Tiles" type="Node2D"]
 
 _sections_unfolded = [ "Visibility" ]
 

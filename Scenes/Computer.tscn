@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Computer.gd" type="Script" id=1]
 [ext_resource path="res://GFX/PNG/Tiles/tile_537.png" type="Texture" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_519.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/ComputerTerminal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GFX/Interface_overlay.material" type="Material" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -16,7 +17,9 @@ closed = false
 cull_mode = 1
 polygon = PoolVector2Array( 8, 28, -4, 28, -4, 20, -8, 16, -8, -20, -4, -20, -4, -28, 8, -28, 8, -24, 4, -24, 4, 24, 8, 24 )
 
-[node name="Computer" type="Area2D" index="0"]
+[node name="Computer" type="Area2D" groups=[
+"interface",
+]]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -31,6 +34,8 @@ _sections_unfolded = [ "Collision", "Pickable" ]
 __meta__ = {
 "_edit_group_": true
 }
+id = 1
+combination_length = 4
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -77,6 +82,32 @@ _sections_unfolded = [ "Shadow", "Transform" ]
 occluder = SubResource( 2 )
 light_mask = 1
 
+[node name="Light2D" type="Light2D" parent="LightOccluder2D" index="0"]
+
+rotation = 1.5708
+enabled = true
+editor_only = false
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Transform" ]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
 
 layer = 1
@@ -88,6 +119,30 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 [node name="Popup" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
 
 visible = false
+
+[node name="Label" type="Label" parent="." index="5"]
+
+material = ExtResource( 5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = -12.0
+margin_right = 66.0
+margin_bottom = 13.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.74353, 1, 0.65625, 1 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors" ]
 
 [connection signal="body_entered" from="." to="." method="_on_Computer_body_entered"]
 

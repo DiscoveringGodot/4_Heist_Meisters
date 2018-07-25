@@ -8,7 +8,7 @@ func _ready():
 	reset_lock()
 
 func enter(button):
-	$AudioStreamPlayer.stream = load("res://SFX/twoTone1.ogg")
+	$AudioStreamPlayer.stream = load(global.tone_1)
 	guess.append(button)
 	$AudioStreamPlayer.play()
 	update_display()
@@ -20,17 +20,16 @@ func update_display():
 		check_guess()
 
 
-
 func check_guess():
 	if guess == door.combination:
 		$Timer.start()
-		light.texture = load("res://GFX/Interface/PNG/dotGreen.png")
+		light.texture = load(global.green_light)
 	else:
 		reset_lock()
 
 
 func reset_lock():
-	light.texture = load("res://GFX/Interface/PNG/dotRed.png")
+	light.texture = load(global.red_light)
 	guess = []
 	display.bbcode_text = ""
 
@@ -80,6 +79,6 @@ func _on_Enter_pressed():
 
 
 func _on_Timer_timeout():
-	$AudioStreamPlayer.stream = load("res://SFX/threeTone1.ogg")
+	$AudioStreamPlayer.stream = load(global.tone_2)
 	$AudioStreamPlayer.play()
-	door.open()
+	door.open("")
