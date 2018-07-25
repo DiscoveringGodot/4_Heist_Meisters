@@ -11,7 +11,7 @@ func open(body):
 
 
 func _input_event(viewport, event, shape_idx):
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) && can_open:
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) && can_click:
 		lock.popup_centered()
 
 
@@ -34,6 +34,6 @@ func _on_Door_body_exited(body):
 func set_night_vision_on():
 	$Label.visible = true
 
-	
-func set_night_vision_off():
+
+func set_night_vision_off():  # TODO consider naming convention for these group "messages"
 	$Label.visible = false

@@ -1,11 +1,14 @@
 extends Popup
 
-onready var door = (get_parent().get_parent())
+onready var door = get_parent().get_parent()
 onready var display = $VSplitContainer/CenterContainer/Display
 onready var light = $VSplitContainer/CenterContainer2/GridContainer/Light
+
 var guess =[]
+
 func _ready():
 	reset_lock()
+
 
 func enter(button):
 	$AudioStreamPlayer.stream = load(global.tone_1)
@@ -34,6 +37,7 @@ func reset_lock():
 	display.bbcode_text = ""
 
 
+# TODO change to _on_Number_Button_pressed(num)
 func _on_Button1_pressed():
 	enter(1)
 

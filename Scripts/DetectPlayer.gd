@@ -13,7 +13,7 @@ signal player_seen
 func _ready():
 	connect("player_seen", get_node("/root/Level1"), "player_seen")
 
-	
+
 func _process(delta):
 	if player_in_fov() && player_in_los():
 		light.color = RED
@@ -24,17 +24,17 @@ func _process(delta):
 
 func player_in_los():
 	var space = get_world_2d().direct_space_state
-	var result = space.intersect_ray(global_position, Player.global_position, [self], collision_mask)
-	if not result : return false
-
+	var hit_result = space.intersect_ray(global_position, Player.global_position, [self], collision_mask)
+	if not hit_result : return false
 
 	var distance_to_player = Player.global_position.distance_to(global_position) 
 	var player_within_range = distance_to_player < DETECTION_DISTANCE
-	if result.collider == Player && player_within_range:
+
+	if hit_result.collider == Player and player_within_range:
 		return true
 	else:
 		return false
-#	var hit_pos = result.global_position
+#	var hit_pos = hit_result.global_position
 
 
 func player_in_fov():
@@ -60,3 +60,5 @@ func set_night_vision_off():
 #		draw_line(Vector2(), (hit_pos - global_position).rotated(-global_rotation),WHITE, 1)
 #	else:
 #		draw_line(Vector2(), Vector2(),Color (1,1,1,0), 1)
+
+# signed-off

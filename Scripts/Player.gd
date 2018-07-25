@@ -2,11 +2,11 @@ extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
 export var disguises = 3 # how many times can you disguise yourself?
-export var disguised_velocity = 0.33 # how fast do you move when disguised?
+export var disguised_slowdown = 0.25 # how fast do you move when disguised?
 export var disguise_duration = 5 # how many seconds does a disguise last?
 
 var disguised = false
-var velocity = 1
+var velocity_multiplier = 1
 var night_vision = false
 
 func _ready():
@@ -17,10 +17,10 @@ func _ready():
 
 func _process(delta):
 	update_motion(delta)
-	move_and_slide(motion * velocity)
+	move_and_slide(motion * velocity_multiplier)
 	if disguised:
 		$Label.text =  str($Timer.time_left).pad_decimals(2)
-		$Label.rect_rotation = (0 -rotation_degrees)
+		$Label.rect_rotation = (0 - rotation_degrees)
 
 
 func reveal():
@@ -29,7 +29,7 @@ func reveal():
 	$LightOccluder2D.occluder = load(global.player_occlusion)
 	$LightOccluder2D/Light2D.texture = load(global.player_sprite)
 	$Label.visible = false
-	velocity = 1
+	velocity_multiplier = 1
 	disguised = false
 	refresh_disguise_display()
 
@@ -42,7 +42,7 @@ func disguise():
 	$LightOccluder2D/Light2D.texture = load(global.box_sprite)
 	$Label.visible = true
 	$Timer.start()
-	velocity = 0.25
+	velocity_multiplier = disguised_slowdown
 	disguised = true
 	refresh_disguise_display()
 
@@ -54,25 +54,17 @@ func refresh_disguise_display():
 func update_motion(delta):
 	look_at(get_global_mouse_position())
 
-	if Input.is_action_pressed("ui_down") && not Input.is_action_pressed("ui_up"):
-		motion.y += SPEED 
-		if motion.y > MAX_SPEED:
-			motion.y = MAX_SPEED
-	elif Input.is_action_pressed("ui_up") && not Input.is_action_pressed("ui_down"):
-		motion.y -= SPEED 
-		if motion.y < -MAX_SPEED:
-			motion.y = -MAX_SPEED
+	if Input.is_action_pressed("ui_down") and not Input.is_action_pressed("ui_up"):
+		motion.y = clamp(motion.y + SPEED, 0, MAX_SPEED)
+	elif Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
+		motion.y = clamp(motion.y - SPEED, -MAX_SPEED, 0)
 	else:
 		motion.y = lerp(motion.y, 0, FRICTION)
 		
-	if Input.is_action_pressed("ui_right") && not Input.is_action_pressed("ui_left"):
-		motion.x += SPEED
-		if motion.x > MAX_SPEED:
-			motion.x = MAX_SPEED
-	elif Input.is_action_pressed("ui_left") && not Input.is_action_pressed("ui_right"):
-		motion.x -= SPEED
-		if motion.x < -MAX_SPEED:
-			motion.x = -MAX_SPEED
+	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
+		motion.x = clamp(motion.x + SPEED, 0, MAX_SPEED)
+	elif Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
+		motion.x = clamp(motion.x - SPEED, -MAX_SPEED, 0)
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)
 

@@ -172,33 +172,40 @@ rotation = 4.71239
 
 position = Vector2( 750, 832 )
 rotation = 1.5708
+can_click = false
 
 [node name="Locked_Door" parent="Doors" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 645, 535 )
+can_click = false
 
 [node name="Locked_Door2" parent="Doors" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 350.594, 702.615 )
 rotation = 4.71239
+can_click = false
 
 [node name="Door2" parent="Doors" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 1580.95, 64.4566 )
 rotation = 1.5708
+can_click = false
 
 [node name="Locked_Door4" parent="Doors" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 1411.3, 1048.87 )
+can_click = false
 
 [node name="Door3" parent="Doors" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 1412.37, 217.056 )
+can_click = false
 
 [node name="Locked_Door3" parent="Doors" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 1052, 132.757 )
 rotation = -1.5708
+can_click = false
 
 [node name="Walls" type="TileMap" parent="." index="4"]
 
@@ -230,6 +237,7 @@ __meta__ = {
 position = Vector2( 96, 160 )
 collision_mask = 15
 collision/safe_margin = 0.08
+disguised_slowdown = 0.25
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="3"]
 
@@ -405,21 +413,21 @@ collision/safe_margin = 0.08
 
 position = Vector2( 864, 352 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
-id = "1"
+lock_group = "1"
 
 [node name="Computer2" parent="Computers" index="1" instance=ExtResource( 13 )]
 
 position = Vector2( 865.407, 997.266 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
-id = "2"
+lock_group = "1"
 
 [node name="Computer3" parent="Computers" index="2" instance=ExtResource( 13 )]
 
 position = Vector2( 2465.59, 362.223 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
-id = "vault"
+lock_group = "1"
 combination_length = 8
 
 [node name="Combination" type="Node" parent="." index="10"]
