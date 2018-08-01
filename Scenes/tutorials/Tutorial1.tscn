@@ -1,37 +1,27 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Tilesets/floors.tres" type="TileSet" id=1]
-[ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=2]
-[ext_resource path="res://Scenes/CanvasModulate.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Theme.tres" type="Theme" id=5]
-[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/lights.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Tilesets/floors.tres" type="TileSet" id=2]
+[ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/tutorials/TutorialGui.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/CanvasModulate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/lights.gd" type="Script" id=10]
+[ext_resource path="res://GFX/Interface/PNG/crossair_blueOutline.png" type="Texture" id=11]
 
-[node name="Tutorial1" type="Node"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 34.5377, 33.0643 )
+
+[node name="Tutorial1" type="Node" index="0"]
+
+script = ExtResource( 1 )
 
 [node name="Floor" type="TileMap" parent="." index="0"]
-
-mode = 0
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 64, 64 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray( 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 131073, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 9, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 131082, 9, 0, 131083, 9, 0, 131084, 9, 0, 131085, 9, 0, 131086, 9, 0, 131087, 9, 0, 196611, 9, 0, 196622, 9, 0, 262158, 9, 0, 262159, 9, 0, 327695, 9, 0, 393223, 9, 0, 393224, 9, 0, 393225, 9, 0, 393226, 9, 0, 393227, 9, 0, 393228, 9, 0, 393229, 9, 0, 393231, 9, 0, 393232, 9, 0, 458759, 9, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 9, 0, 458764, 9, 0, 458765, 9, 0, 458767, 9, 0, 458768, 9, 0, 524295, 9, 0, 524296, 9, 0, 524297, 9, 0, 524298, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 9, 0, 524303, 9, 0, 524304, 9, 0, 589839, 9, 0 )
-
-[node name="Wall" type="TileMap" parent="." index="1"]
 
 mode = 0
 tile_set = ExtResource( 2 )
@@ -45,60 +35,94 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 0, 0, 262144, 1, 0, 262146, 2, 0, 262146, 3, 0, 262146, 4, 0, 262146, 5, 0, 262146, 6, 0, 262146, 7, 0, 262146, 8, 0, 262146, 9, 0, 262146, 10, 0, 262146, 11, 0, 262146, 12, 0, 262146, 13, 0, 262146, 14, 0, 262146, 15, 0, 262146, 16, 0, 262145, 65536, 0, 327682, 65552, 0, 327682, 131072, 0, 327682, 131088, 0, 327682, 196608, 0, 327680, 196609, 0, 262146, 196610, 0, 262146, 196611, 0, 262146, 196612, 0, 262146, 196613, 0, 524292, 196614, 0, 458756, 196615, 0, 458756, 196616, 0, 458756, 196617, 0, 458756, 196618, 0, 458756, 196619, 0, 458756, 196620, 0, 458756, 196621, 0, 262152, 196623, 0, 327686, 196624, 0, 327684, 262149, 0, 393220, 262150, 0, 393222, 262151, 0, 393222, 262152, 0, 393222, 262153, 0, 393222, 262154, 0, 393222, 262155, 0, 393222, 262156, 0, 393222, 262157, 0, 393221, 262160, 0, 327682, 327685, 0, 393220, 327686, 0, 393216, 327687, 0, 458757, 327688, 0, 458757, 327689, 0, 458757, 327690, 0, 458757, 327691, 0, 458757, 327692, 0, 458757, 327693, 0, 589829, 327694, 0, 262145, 327696, 0, 327682, 393221, 0, 393220, 393222, 0, 393221, 393230, 0, 327682, 393232, 0, 327682, 458757, 0, 393220, 458758, 0, 393221, 458764, 0, 327685, 458766, 0, 262150, 458768, 0, 327682, 524293, 0, 393220, 524294, 0, 393221, 524300, 0, 327682, 524304, 0, 327682, 589829, 0, 393220, 589830, 0, 458752, 589831, 0, 458756, 589832, 0, 458756, 589833, 0, 458756, 589834, 0, 458756, 589835, 0, 458756, 589836, 0, 393219, 589837, 0, 458756, 589838, 0, 262152, 589840, 0, 327682, 655365, 0, 327687, 655366, 0, 458757, 655367, 0, 458757, 655368, 0, 458757, 655369, 0, 458757, 655370, 0, 458757, 655371, 0, 458757, 655372, 0, 458757, 655373, 0, 458757, 655374, 0, 589829, 655375, 0, 262146, 655376, 0, 327681 )
+tile_data = PoolIntArray( 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 131073, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 9, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 131082, 9, 0, 131083, 9, 0, 131084, 9, 0, 131085, 9, 0, 131086, 9, 0, 131087, 9, 0, 196611, 9, 0, 196622, 9, 0, 262158, 9, 0, 262159, 9, 0, 327695, 9, 0, 393223, 9, 0, 393224, 9, 0, 393225, 9, 0, 393226, 9, 0, 393227, 9, 0, 393228, 9, 0, 393229, 9, 0, 393231, 9, 0, 393232, 9, 0, 458759, 9, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 9, 0, 458764, 9, 0, 458765, 9, 0, 458767, 9, 0, 458768, 9, 0, 524295, 9, 0, 524296, 9, 0, 524297, 9, 0, 524298, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 9, 0, 524303, 9, 0, 524304, 9, 0, 589839, 9, 0 )
+_sections_unfolded = [ "Collision" ]
 
-[node name="CanvasModulate" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Wall" type="TileMap" parent="." index="1"]
 
-[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 262144, 1, 0, 262146, 2, 0, 262146, 3, 0, 262146, 4, 0, 262146, 5, 0, 262146, 6, 0, 262146, 7, 0, 262146, 8, 0, 262147, 9, 0, 262146, 10, 0, 262146, 11, 0, 262146, 12, 0, 262146, 13, 0, 262146, 14, 0, 262146, 15, 0, 262146, 16, 0, 262145, 65536, 0, 327682, 65544, 0, 262150, 65552, 0, 327682, 131072, 0, 327682, 131084, 0, 327685, 131088, 0, 327682, 196608, 0, 327680, 196609, 0, 262146, 196610, 0, 262146, 196611, 0, 262146, 196612, 0, 262146, 196613, 0, 524292, 196614, 0, 458756, 196615, 0, 458756, 196616, 0, 458756, 196617, 0, 458756, 196618, 0, 458756, 196619, 0, 458756, 196620, 0, 393219, 196621, 0, 262152, 196623, 0, 327686, 196624, 0, 327684, 262149, 0, 393220, 262150, 0, 393222, 262151, 0, 393222, 262152, 0, 393222, 262153, 0, 393222, 262154, 0, 393222, 262155, 0, 393222, 262156, 0, 393222, 262157, 0, 393221, 262160, 0, 327682, 327685, 0, 393220, 327686, 0, 393216, 327687, 0, 458757, 327688, 0, 458757, 327689, 0, 458757, 327690, 0, 458757, 327691, 0, 458757, 327692, 0, 458757, 327693, 0, 589829, 327694, 0, 262145, 327696, 0, 327682, 393221, 0, 393220, 393222, 0, 393221, 393230, 0, 327682, 393232, 0, 327682, 458757, 0, 393220, 458758, 0, 393221, 458764, 0, 327685, 458766, 0, 262150, 458768, 0, 327682, 524293, 0, 393220, 524294, 0, 393221, 524300, 0, 327682, 524304, 0, 327682, 589829, 0, 393220, 589830, 0, 458752, 589831, 0, 458756, 589832, 0, 458756, 589833, 0, 458756, 589834, 0, 458756, 589835, 0, 458756, 589836, 0, 393219, 589837, 0, 458756, 589838, 0, 262152, 589840, 0, 327682, 655365, 0, 327687, 655366, 0, 458757, 655367, 0, 458757, 655368, 0, 458757, 655369, 0, 458757, 655370, 0, 458757, 655371, 0, 458757, 655372, 0, 458757, 655373, 0, 458757, 655374, 0, 589829, 655375, 0, 262146, 655376, 0, 327681 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Doors" type="Node" parent="." index="2"]
+
+[node name="Door" parent="Doors" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 811.078, 63.1577 )
+rotation = 1.5708
+
+[node name="TutorialGui" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="CanvasModulate" parent="." index="4" instance=ExtResource( 6 )]
+
+[node name="Player" parent="." index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 210, 150 )
 
 [node name="briefcase" type="Node" parent="Player" index="5"]
 
-[node name="Label" type="Label" parent="." index="4"]
+[node name="Camera2D" type="Camera2D" parent="Player" index="6"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 537.0
-margin_top = 113.0
-margin_right = 1040.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-theme = ExtResource( 5 )
-text = "W A S D to move"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Material", "Theme", "Visibility" ]
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
-[node name="Exit" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Exit" parent="." index="6" instance=ExtResource( 8 )]
 
 margin_left = 520.0
 margin_top = 450.0
 margin_right = 640.0
 margin_bottom = 510.0
 
-[node name="lights" type="Node" parent="." index="6"]
+[node name="lights" type="Node" parent="." index="7"]
+
+editor/display_folded = true
 
 [node name="Light2D" type="Light2D" parent="lights" index="0"]
 
 position = Vector2( 1015.79, 178.362 )
 rotation = -2.89731
-scale = Vector2( 1, 1 )
 enabled = true
 editor_only = false
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 offset = Vector2( 320, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -117,16 +141,15 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-script = ExtResource( 8 )
+script = ExtResource( 10 )
 
 [node name="Light2D2" type="Light2D" parent="lights" index="1"]
 
 position = Vector2( 132.691, 69.7753 )
 rotation = -5.94006
-scale = Vector2( 1, 1 )
 enabled = true
 editor_only = false
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 offset = Vector2( 320, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -145,6 +168,119 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-script = ExtResource( 8 )
+script = ExtResource( 10 )
+
+[node name="Transitions" type="Node" parent="." index="8"]
+
+[node name="MovementComplete" type="Area2D" parent="Transitions" index="0"]
+
+position = Vector2( 588.515, 158.84 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/MovementComplete" index="0"]
+
+position = Vector2( 21.1506, -0.358475 )
+shape = SubResource( 1 )
+
+[node name="InteractionComplete" type="Area2D" parent="Transitions" index="1"]
+
+position = Vector2( 827.409, 97.224 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/InteractionComplete" index="0"]
+
+position = Vector2( 21.1506, -0.358475 )
+shape = SubResource( 1 )
+
+[node name="InteractionComplete2" type="Area2D" parent="Transitions" index="2"]
+
+position = Vector2( 851.81, 548.103 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/InteractionComplete2" index="0"]
+
+position = Vector2( 20.1753, -4.25989 )
+shape = SubResource( 1 )
+
+[node name="ObjectivePointer" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 512.884, 140.38 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Light2D" type="Light2D" parent="ObjectivePointer" index="0"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 11 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="ObjectiveMarkers" type="Node" parent="." index="10"]
+
+editor/display_folded = true
+
+[node name="Objective1" type="Position2D" parent="ObjectiveMarkers" index="0"]
+
+position = Vector2( 629.87, 164.652 )
+
+[node name="Objective2" type="Position2D" parent="ObjectiveMarkers" index="1"]
+
+position = Vector2( 818.471, 99.3901 )
+
+[node name="Objective3" type="Position2D" parent="ObjectiveMarkers" index="2"]
+
+position = Vector2( 872.014, 546.285 )
+
+[node name="Objective4" type="Position2D" parent="ObjectiveMarkers" index="3"]
+
+position = Vector2( 572.097, 477.922 )
+
+[connection signal="body_entered" from="Transitions/MovementComplete" to="." method="_on_MovementComplete_body_entered"]
+
+[connection signal="body_entered" from="Transitions/InteractionComplete" to="." method="_on_InteractionComplete_body_entered"]
+
+[connection signal="body_entered" from="Transitions/InteractionComplete2" to="." method="_on_InteractionComplete_body_entered"]
 
 

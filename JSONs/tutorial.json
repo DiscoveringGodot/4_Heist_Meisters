@@ -1,0 +1,20 @@
+{
+  "0":
+    "Welcome, Heist Meister.  Let's get you up to speed.
+    Use [W] [A] [S] [D] to move to the next room.",
+
+  "1":
+    "Excellent work. Now - Open the door ahead.
+    Interact with things by clicking on them.
+    Note that you can only interact with objects
+    that are in range",
+
+  "2":
+    "You'll need to work in the dark, so
+    we've provided you with T.O.U.C.A.N
+    nightvision.  Switch vision modes by
+    pressing [SPACE]",
+
+  "3":
+    "Outstanding.  Now head for the exit."
+}

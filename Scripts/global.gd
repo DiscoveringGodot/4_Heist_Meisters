@@ -26,3 +26,6 @@ var GameLost = "res://Scenes/GameLost.tscn"
 var GameWon = "res://Scenes/GameWon.tscn"
 var level1 = "res://Scenes/Level1.tscn"
 var tutorial1 = "res://Scenes/tutorials/Tutorial1.tscn"
+
+#JSON paths - MUST be set MANUALLY
+var tutorial_text = "res://JSONs/tutorial.json"
