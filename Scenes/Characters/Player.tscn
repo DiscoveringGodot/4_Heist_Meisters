@@ -5,14 +5,14 @@
 [ext_resource path="res://GFX/PNG/Hitman 1/hitman1_stand.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Interface_overlay.material" type="Material" id=4]
 
-[node name="Player" index="0" instance=ExtResource( 1 )]
+[node name="Player" instance=ExtResource( 1 )]
 
 position = Vector2( 0.291985, 1.45994 )
 collision/safe_margin = 1.0
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Material", "collision" ]
 disguises = 3
-disguised_velocity = 0.33
+disguised_slowdown = 0.25
 disguise_duration = 5
 
 [node name="Sprite" parent="." index="0"]
@@ -31,8 +31,8 @@ texture = ExtResource( 3 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
-energy = 0.75
-mode = 0
+energy = 1.5
+mode = 2
 range_height = 0.0
 range_z_min = -1024
 range_z_max = 1024

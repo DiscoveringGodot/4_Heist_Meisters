@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/splash_screen.gd" type="Script" id=1]
-[ext_resource path="res://GFX/Interface/PNG/metalPanel.png" type="Texture" id=2]
-[ext_resource path="res://Theme.tres" type="Theme" id=3]
+[ext_resource path="res://Theme.tres" type="Theme" id=2]
+[ext_resource path="res://GFX/Interface/PNG/metalPanel.png" type="Texture" id=3]
 
 [node name="Splash" type="CanvasLayer"]
 
@@ -25,7 +25,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 use_top_left = false
+_sections_unfolded = [ "Theme" ]
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer" index="0"]
 
@@ -44,7 +46,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/NinePatchRect" index="0"]
@@ -68,16 +70,18 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 50.0
-margin_top = 44.0
+margin_top = 28.0
 margin_right = 250.0
-margin_bottom = 156.0
+margin_bottom = 171.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 columns = 1
+_sections_unfolded = [ "Theme" ]
 
 [node name="Label" type="RichTextLabel" parent="CenterContainer/NinePatchRect/CenterContainer/GridContainer" index="0"]
 
@@ -94,7 +98,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
@@ -129,7 +133,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -139,7 +143,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
-[node name="QuitButton" type="Button" parent="CenterContainer/NinePatchRect/CenterContainer/GridContainer" index="2"]
+[node name="TutorialButton" type="Button" parent="CenterContainer/NinePatchRect/CenterContainer/GridContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -155,7 +159,31 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Tutorial"
+flat = false
+align = 1
+
+[node name="QuitButton" type="Button" parent="CenterContainer/NinePatchRect/CenterContainer/GridContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 120.0
+margin_right = 200.0
+margin_bottom = 143.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -166,6 +194,8 @@ align = 1
 _sections_unfolded = [ "Theme" ]
 
 [connection signal="button_down" from="CenterContainer/NinePatchRect/CenterContainer/GridContainer/StartButton" to="." method="_on_StartButton_button_down"]
+
+[connection signal="pressed" from="CenterContainer/NinePatchRect/CenterContainer/GridContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
 
 [connection signal="button_down" from="CenterContainer/NinePatchRect/CenterContainer/GridContainer/QuitButton" to="." method="_on_QuitButton_button_down"]
 

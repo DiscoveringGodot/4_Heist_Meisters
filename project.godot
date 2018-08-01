@@ -16,6 +16,7 @@ run/main_scene="res://Scenes/Splash.tscn"
 [autoload]
 
 global="*res://Scripts/global.gd"
+BGM="*res://Scenes/BGM.tscn"
 
 [display]
 

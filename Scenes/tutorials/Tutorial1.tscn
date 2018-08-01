@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Tilesets/floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/CanvasModulate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Theme.tres" type="Theme" id=5]
-[ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/lights.gd" type="Script" id=8]
 
 [node name="Tutorial1" type="Node"]
 
@@ -54,7 +56,8 @@ tile_data = PoolIntArray( 0, 0, 262144, 1, 0, 262146, 2, 0, 262146, 3, 0, 262146
 [node name="Player" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 210, 150 )
-disguised_slowdown = 0.25
+
+[node name="briefcase" type="Node" parent="Player" index="5"]
 
 [node name="Label" type="Label" parent="." index="4"]
 
@@ -62,10 +65,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 400.0
-margin_top = 120.0
-margin_right = 903.0
-margin_bottom = 145.0
+margin_left = 537.0
+margin_top = 113.0
+margin_right = 1040.0
+margin_bottom = 138.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -73,19 +76,29 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 theme = ExtResource( 5 )
-text = "Press space to change vision modes"
+text = "W A S D to move"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Theme", "Visibility" ]
 
-[node name="Light2D" type="Light2D" parent="." index="5"]
+[node name="Exit" parent="." index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 1040.17, 185.011 )
+margin_left = 520.0
+margin_top = 450.0
+margin_right = 640.0
+margin_bottom = 510.0
+
+[node name="lights" type="Node" parent="." index="6"]
+
+[node name="Light2D" type="Light2D" parent="lights" index="0"]
+
+position = Vector2( 1015.79, 178.362 )
 rotation = -2.89731
+scale = Vector2( 1, 1 )
 enabled = true
 editor_only = false
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 offset = Vector2( 320, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -97,21 +110,23 @@ range_z_max = 1024
 range_layer_min = 0
 range_layer_max = 0
 range_item_cull_mask = 1
-shadow_enabled = false
+shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 0 )
 shadow_buffer_size = 2048
 shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+script = ExtResource( 8 )
 
-[node name="Light2D2" type="Light2D" parent="." index="6"]
+[node name="Light2D2" type="Light2D" parent="lights" index="1"]
 
-position = Vector2( 225.121, 195.032 )
-rotation = -0.304555
+position = Vector2( 132.691, 69.7753 )
+rotation = -5.94006
+scale = Vector2( 1, 1 )
 enabled = true
 editor_only = false
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 offset = Vector2( 320, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -123,12 +138,13 @@ range_z_max = 1024
 range_layer_min = 0
 range_layer_max = 0
 range_item_cull_mask = 1
-shadow_enabled = false
+shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 0 )
 shadow_buffer_size = 2048
 shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+script = ExtResource( 8 )
 
 
