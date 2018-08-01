@@ -45,6 +45,10 @@ func _on_InteractionComplete_body_entered(body):
 	gui_transition()
 
 
+func _on_NightvisionComplete_body_entered(body):
+	get_tree().call_group("interface", "set_night_vision_off")
+	gui_transition()
+
 
 func set_night_vision_off():
 	GUI.show()
@@ -52,3 +56,4 @@ func set_night_vision_off():
 
 func set_night_vision_on():
 	GUI.hide()
+

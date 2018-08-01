@@ -208,7 +208,7 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 21.1506, -0.358475 )
 shape = SubResource( 1 )
 
-[node name="InteractionComplete2" type="Area2D" parent="Transitions" index="2"]
+[node name="NightvisionComplete" type="Area2D" parent="Transitions" index="2"]
 
 position = Vector2( 851.81, 548.103 )
 input_pickable = true
@@ -221,7 +221,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/InteractionComplete2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/NightvisionComplete" index="0"]
 
 position = Vector2( 20.1753, -4.25989 )
 shape = SubResource( 1 )
@@ -281,6 +281,6 @@ position = Vector2( 572.097, 477.922 )
 
 [connection signal="body_entered" from="Transitions/InteractionComplete" to="." method="_on_InteractionComplete_body_entered"]
 
-[connection signal="body_entered" from="Transitions/InteractionComplete2" to="." method="_on_InteractionComplete_body_entered"]
+[connection signal="body_entered" from="Transitions/NightvisionComplete" to="." method="_on_NightvisionComplete_body_entered"]
 
 
