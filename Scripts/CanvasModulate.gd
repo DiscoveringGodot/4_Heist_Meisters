@@ -8,11 +8,13 @@ func _ready():
 	color = DARK
 
 func set_night_vision_on():
+	$AudioStreamPlayer.stream = load(global.nightvision_on_sfx)
 	$AudioStreamPlayer.play()
 	color = NIGHTVISION
 
 func set_night_vision_off():  # to avoid boolean parameters which means func does two things
-	$AudioStreamPlayer.play()  # TODO consider separate off sound
+	$AudioStreamPlayer.stream = load(global.nightvision_off_sfx)
+	$AudioStreamPlayer.play() 
 	color = DARK
 
 # signed-off

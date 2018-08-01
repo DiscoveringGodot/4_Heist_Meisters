@@ -7,11 +7,12 @@
 [ext_resource path="res://GFX/Interface_overlay.material" type="Material" id=5]
 [ext_resource path="res://Scenes/ExitDetection.tscn" type="PackedScene" id=6]
 
-[node name="Locked_Door" index="0" groups=[
+[node name="Locked_Door" groups=[
 "interface",
 ] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+can_click = false
 
 [node name="Sprite" parent="." index="1"]
 

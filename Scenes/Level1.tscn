@@ -172,40 +172,33 @@ rotation = 4.71239
 
 position = Vector2( 750, 832 )
 rotation = 1.5708
-can_click = false
 
 [node name="Locked_Door" parent="Doors" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 645, 535 )
-can_click = false
 
 [node name="Locked_Door2" parent="Doors" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 350.594, 702.615 )
 rotation = 4.71239
-can_click = false
 
 [node name="Door2" parent="Doors" index="3" instance=ExtResource( 6 )]
 
 position = Vector2( 1580.95, 64.4566 )
 rotation = 1.5708
-can_click = false
 
 [node name="Locked_Door4" parent="Doors" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 1411.3, 1048.87 )
-can_click = false
 
 [node name="Door3" parent="Doors" index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 1412.37, 217.056 )
-can_click = false
 
 [node name="Locked_Door3" parent="Doors" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 1052, 132.757 )
 rotation = -1.5708
-can_click = false
 
 [node name="Walls" type="TileMap" parent="." index="4"]
 
@@ -269,7 +262,6 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 "interface",
 ]]
 
-editor/display_folded = true
 visible = false
 position = Vector2( -64, 0 )
 color = Color( 0.0121384, 0.0121384, 0.144531, 1 )
@@ -278,7 +270,7 @@ script = ExtResource( 10 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasModulate" index="0"]
 
 stream = ExtResource( 11 )
-volume_db = 0.0
+volume_db = -10.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
@@ -286,7 +278,6 @@ bus = "Master"
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="7"]
 
-editor/display_folded = true
 visible = false
 _sections_unfolded = [ "Transform" ]
 
@@ -605,9 +596,9 @@ margin_top = 60.0
 margin_right = 590.0
 margin_bottom = 120.0
 
-[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="Doors/Locked_Door3" method="_on_Computer_combination"]
 

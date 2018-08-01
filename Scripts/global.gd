@@ -18,6 +18,8 @@ var briefcase_sprite = "res://GFX/Loot/suitcase.png"
 #SFX paths - MUST be set MANUALLY
 var tone_1 = "res://SFX/twoTone1.ogg"
 var tone_2 = "res://SFX/threeTone1.ogg"
+var nightvision_on_sfx = "res://SFX/nightvision.wav"
+var nightvision_off_sfx ="res://SFX/nightvision_off.wav"
 
 #Scene paths - MUST be set MANUALLY
 var GameLost = "res://Scenes/GameLost.tscn"

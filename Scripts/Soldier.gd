@@ -45,7 +45,7 @@ func navigate():
 
 func move():
 	look_at(destination)
-	motion = (destination-position).normalized() * (MAX_SPEED / walk_slowdown)
+	motion = (destination-position).normalized() * (MAX_SPEED * walk_slowdown)
 
 	if is_on_wall():  # re-path if stuck at wall
 		make_path()

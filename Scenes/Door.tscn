@@ -76,7 +76,7 @@ closed = false
 cull_mode = 1
 polygon = PoolVector2Array( 0, 0, 64, 0, 64, 16, 0, 16 )
 
-[node name="Door" type="Area2D" index="0"]
+[node name="Door" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -89,7 +89,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
-can_open = false
+can_click = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
