@@ -12,6 +12,7 @@ signal player_seen
 
 func _ready():
 	connect("player_seen", get_node("/root/Level1"), "player_seen")
+	add_to_group("npc")
 
 
 func _process(delta):

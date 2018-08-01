@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/floors.tres" type="TileSet" id=2]
@@ -9,18 +9,17 @@
 [ext_resource path="res://Scenes/Locked_Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=8]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scripts/CanvasModulate.gd" type="Script" id=10]
-[ext_resource path="res://SFX/switch38.ogg" type="AudioStream" id=11]
-[ext_resource path="res://Scenes/Characters/Soldier.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scripts/Combination.gd" type="Script" id=14]
-[ext_resource path="res://GFX/Interface_overlay.material" type="Material" id=15]
-[ext_resource path="res://Theme.tres" type="Theme" id=16]
-[ext_resource path="res://Scripts/Text_overlay.gd" type="Script" id=17]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=18]
-[ext_resource path="res://SFX/Music/StealthintheWoods.ogg" type="AudioStream" id=19]
-[ext_resource path="res://Scenes/Loot.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/CanvasModulate.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Characters/Soldier.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scripts/Combination.gd" type="Script" id=13]
+[ext_resource path="res://GFX/Interface_overlay.material" type="Material" id=14]
+[ext_resource path="res://Theme.tres" type="Theme" id=15]
+[ext_resource path="res://Scripts/Text_overlay.gd" type="Script" id=16]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=17]
+[ext_resource path="res://SFX/Music/StealthintheWoods.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Scenes/Loot.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=20]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -28,7 +27,7 @@ vertices = PoolVector2Array( 320, 384, 448, 320, 816, 304, 784, 496, 688, 496, 6
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 13, 1, 0 ), PoolIntArray( 13, 0, 14 ), PoolIntArray( 11, 10, 15, 16 ), PoolIntArray( 16, 15, 3, 2 ), PoolIntArray( 17, 18, 19, 20, 21 ), PoolIntArray( 22, 23, 17, 21 ), PoolIntArray( 24, 25, 26, 27, 28, 29, 30 ), PoolIntArray( 31, 32, 33, 34 ), PoolIntArray( 2, 1, 35, 9 ), PoolIntArray( 36, 37, 38, 39, 40, 41 ), PoolIntArray( 42, 43, 44 ), PoolIntArray( 45, 22, 21, 46 ), PoolIntArray( 46, 25, 24, 47 ), PoolIntArray( 48, 49, 50, 51 ), PoolIntArray( 52, 53, 54, 55 ), PoolIntArray( 55, 56, 57 ), PoolIntArray( 52, 55, 57, 51 ), PoolIntArray( 51, 57, 58 ), PoolIntArray( 58, 59, 60, 61 ), PoolIntArray( 51, 58, 61, 48 ), PoolIntArray( 62, 48, 61, 63 ), PoolIntArray( 63, 64, 65, 66 ), PoolIntArray( 67, 68, 69, 70 ), PoolIntArray( 70, 71, 72 ), PoolIntArray( 67, 70, 72 ), PoolIntArray( 65, 67, 72, 73 ), PoolIntArray( 73, 74, 66 ), PoolIntArray( 75, 76, 77, 78 ), PoolIntArray( 75, 78, 79, 66 ), PoolIntArray( 80, 81, 82, 83 ), PoolIntArray( 41, 80, 83, 36 ), PoolIntArray( 12, 84, 85, 9 ), PoolIntArray( 86, 87, 88, 13 ), PoolIntArray( 86, 13, 14, 89 ), PoolIntArray( 89, 14, 90, 91 ), PoolIntArray( 92, 90, 93, 94 ), PoolIntArray( 90, 92, 91 ), PoolIntArray( 95, 89, 91 ), PoolIntArray( 4, 7, 6, 96 ), PoolIntArray( 0, 4, 96 ), PoolIntArray( 0, 96, 97, 93 ), PoolIntArray( 98, 99, 100, 101 ), PoolIntArray( 100, 102, 103, 101 ), PoolIntArray( 98, 101, 104, 8 ), PoolIntArray( 8, 104, 105, 5 ), PoolIntArray( 106, 5, 105, 107, 108 ), PoolIntArray( 109, 106, 108, 94 ), PoolIntArray( 47, 110, 111, 112 ), PoolIntArray( 113, 114, 39 ), PoolIntArray( 29, 28, 115, 116, 117, 118 ), PoolIntArray( 119, 118, 117 ), PoolIntArray( 120, 119, 117, 121, 122 ), PoolIntArray( 123, 124, 122, 121 ), PoolIntArray( 44, 120, 122, 42 ), PoolIntArray( 39, 42, 122, 40 ), PoolIntArray( 112, 45, 46, 47 ), PoolIntArray( 97, 109, 94, 93 ), PoolIntArray( 65, 73, 66 ), PoolIntArray( 62, 63, 66 ), PoolIntArray( 40, 62, 66, 79 ), PoolIntArray( 40, 79, 41 ), PoolIntArray( 113, 39, 38 ), PoolIntArray( 33, 113, 38, 34 ), PoolIntArray( 125, 92, 94 ), PoolIntArray( 125, 94, 126, 127 ), PoolIntArray( 127, 126, 112, 9, 91 ), PoolIntArray( 9, 85, 2 ), PoolIntArray( 35, 88, 87, 9 ), PoolIntArray( 112, 111, 128 ), PoolIntArray( 112, 128, 129 ), PoolIntArray( 112, 129, 31 ), PoolIntArray( 112, 31, 34 ), PoolIntArray( 112, 34, 9 ), PoolIntArray( 9, 87, 95 ), PoolIntArray( 9, 95, 91 ), PoolIntArray( 127, 91, 127 ) ]
 outlines = [ PoolVector2Array( 80, 80, 2224, 80, 2240, 144, 2320, 144, 2550, 140, 2545.57, 171.898, 2590, 190, 2600, 250, 2320, 250, 2320, 176, 2140, 180, 2140, 270, 2179.5, 315.769, 2185.53, 371.541, 2110, 370, 2110, 560, 1932.3, 561.465, 1930, 510, 1840, 510, 1838.84, 564.48, 1673.03, 567.494, 1670, 490, 1520, 490, 1520, 784, 1616, 784, 1616, 720, 1904, 720, 1904, 912, 2000, 912, 2000, 720, 2224, 720, 2224, 1008, 2000, 1008, 2000, 944, 1904, 944, 1904, 1008, 1616, 1008, 1616, 816, 1520, 816, 1520, 1008, 1456, 1008, 1456, 1104, 1776, 1104, 1776, 1456, 1104, 1456, 1104, 1104, 1424, 1104, 1424, 1008, 1376, 1008, 1376, 688, 1264, 688, 1264, 1008, 1104, 1008, 1104, 656, 1376, 656, 1376, 560, 1104, 560, 1104, 272, 1280, 272, 1280, 528, 1360, 528, 1360, 267.678, 1430, 270, 1430, 110, 1010, 110, 1008, 624, 784, 624, 784, 496, 688, 496, 688, 576, 688, 848, 784, 848, 784, 784, 1008, 784, 1008, 1072, 976, 1072, 976, 880, 528, 880, 528, 752, 400, 752, 400, 688, 80, 688 ), PoolVector2Array( 304, 496, 656, 496, 656, 576, 656, 656, 448, 656, 304, 656 ), PoolVector2Array( 1520, 400, 1517.76, 269.185, 1460, 270, 1460, 170, 1523.79, 171.208, 1520, 110, 1630, 110, 1720, 110, 2000, 110, 2000.51, 170.535, 2090, 170, 2090, 270, 1997.11, 272, 2000, 330, 1940, 330, 1924.76, 394.151, 1852.41, 394.151, 1804.17, 330.843, 1690, 330, 1690, 400 ), PoolVector2Array( 128, 128, 192, 128, 192, 384, 128, 384, 128, 128 ), PoolVector2Array( 256, 128, 320, 128, 320, 192, 256, 192 ), PoolVector2Array( 256, 320, 320, 320, 320, 384, 256, 384 ), PoolVector2Array( 384, 192, 384, 320, 448, 320, 448, 192 ), PoolVector2Array( 816, 304, 912, 304, 912, 368, 960, 368, 960, 512, 816, 512 ) ]
 
-[node name="Level1" type="Node" index="0"]
+[node name="Level1" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -258,23 +257,7 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="6" groups=[
-"interface",
-]]
-
-visible = false
-position = Vector2( -64, 0 )
-color = Color( 0.0121384, 0.0121384, 0.144531, 1 )
-script = ExtResource( 10 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasModulate" index="0"]
-
-stream = ExtResource( 11 )
-volume_db = -10.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
+[node name="CanvasModulate" parent="." index="6" instance=ExtResource( 10 )]
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="7"]
 
@@ -376,62 +359,52 @@ __meta__ = {
 
 [node name="Soldiers" type="Node" parent="." index="8"]
 
-editor/display_folded = true
-
-[node name="Soldier" parent="Soldiers" index="0" instance=ExtResource( 12 )]
+[node name="Soldier" parent="Soldiers" index="0" instance=ExtResource( 11 )]
 
 position = Vector2( 640, 256 )
 collision/safe_margin = 0.08
-nav_stop_threshold = 5
-walk_slowdown = 0.5
 
-[node name="Soldier2" parent="Soldiers" index="1" instance=ExtResource( 12 )]
+[node name="Soldier2" parent="Soldiers" index="1" instance=ExtResource( 11 )]
 
 position = Vector2( 2464, 160 )
 collision/safe_margin = 0.08
-nav_stop_threshold = 5
-walk_slowdown = 0.5
 
-[node name="Soldier3" parent="Soldiers" index="2" instance=ExtResource( 12 )]
+[node name="Soldier3" parent="Soldiers" index="2" instance=ExtResource( 11 )]
 
 position = Vector2( 1152, 448 )
 collision/safe_margin = 0.08
-nav_stop_threshold = 5
-walk_slowdown = 0.5
 
-[node name="Soldier4" parent="Soldiers" index="3" instance=ExtResource( 12 )]
+[node name="Soldier4" parent="Soldiers" index="3" instance=ExtResource( 11 )]
 
 position = Vector2( 512, 704 )
 collision/safe_margin = 0.08
-nav_stop_threshold = 5
-walk_slowdown = 0.5
 
 [node name="Computers" type="Node" parent="." index="9"]
 
-[node name="Computer" parent="Computers" index="0" instance=ExtResource( 13 )]
+[node name="Computer" parent="Computers" index="0" instance=ExtResource( 12 )]
 
 position = Vector2( 864, 352 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 lock_group = "1"
 
-[node name="Computer2" parent="Computers" index="1" instance=ExtResource( 13 )]
+[node name="Computer2" parent="Computers" index="1" instance=ExtResource( 12 )]
 
 position = Vector2( 865.407, 997.266 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
-lock_group = "1"
+lock_group = "2"
 
-[node name="Computer3" parent="Computers" index="2" instance=ExtResource( 13 )]
+[node name="Computer3" parent="Computers" index="2" instance=ExtResource( 12 )]
 
 position = Vector2( 2465.59, 362.223 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
-lock_group = "1"
+lock_group = "vault"
 combination_length = 8
 
 [node name="Combination" type="Node" parent="." index="10"]
 
-script = ExtResource( 14 )
+script = ExtResource( 13 )
 
 [node name="MapLabels" type="Node" parent="." index="11"]
 
@@ -441,7 +414,7 @@ editor/display_folded = true
 "interface",
 ]]
 
-material = ExtResource( 15 )
+material = ExtResource( 14 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -456,19 +429,19 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 15 )
 text = "Reception"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Theme" ]
 
 [node name="WaitingArea" type="Label" parent="MapLabels" index="1" groups=[
 "interface",
 ]]
 
-material = ExtResource( 15 )
+material = ExtResource( 14 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -483,19 +456,19 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 15 )
 text = "Waiting Area"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Theme" ]
 
 [node name="ServerRoom" type="Label" parent="MapLabels" index="2" groups=[
 "interface",
 ]]
 
-material = ExtResource( 15 )
+material = ExtResource( 14 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -510,19 +483,19 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 15 )
 text = "Server Room"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Theme" ]
 
 [node name="Vault" type="Label" parent="MapLabels" index="3" groups=[
 "interface",
 ]]
 
-material = ExtResource( 15 )
+material = ExtResource( 14 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -537,19 +510,19 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 15 )
 text = "Vault"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Theme" ]
 
 [node name="CEOOffice" type="Label" parent="MapLabels" index="4" groups=[
 "interface",
 ]]
 
-material = ExtResource( 15 )
+material = ExtResource( 14 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -564,19 +537,19 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 15 )
 text = "CEO's Office"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 _sections_unfolded = [ "Material", "Theme" ]
 
-[node name="GUI" parent="." index="12" instance=ExtResource( 18 )]
+[node name="GUI" parent="." index="12" instance=ExtResource( 17 )]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." index="13"]
 
-stream = ExtResource( 19 )
+stream = ExtResource( 18 )
 volume_db = -15.0
 pitch_scale = 1.0
 autoplay = true
@@ -585,20 +558,20 @@ bus = "Master"
 
 [node name="Loot" type="Node" parent="." index="14"]
 
-[node name="Loot" parent="Loot" index="0" instance=ExtResource( 20 )]
+[node name="Loot" parent="Loot" index="0" instance=ExtResource( 19 )]
 
 position = Vector2( 1450, 1320 )
 
-[node name="Exit" parent="." index="15" instance=ExtResource( 21 )]
+[node name="Exit" parent="." index="15" instance=ExtResource( 20 )]
 
 margin_left = 470.0
 margin_top = 60.0
 margin_right = 590.0
 margin_bottom = 120.0
 
-[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="Doors/Locked_Door3" method="_on_Computer_combination"]
 

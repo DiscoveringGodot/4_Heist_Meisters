@@ -6,6 +6,7 @@ const NIGHTVISION = Color("28c828")
 func _ready():
 	global.canvas_modulate = self
 	color = DARK
+	add_to_group("interface")
 
 func set_night_vision_on():
 	$AudioStreamPlayer.stream = load(global.nightvision_on_sfx)

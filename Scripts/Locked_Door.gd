@@ -5,9 +5,10 @@ var combination
 
 
 func open(body):
-	animation.play("Open")
-	lock.reset_lock()
-	lock.hide()
+	if not animation.is_playing():
+		animation.play("Open")
+		lock.reset_lock()
+		lock.hide()
 
 
 func _input_event(viewport, event, shape_idx):

@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tilesets/floors.tres" type="TileSet" id=1]
+[ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/CanvasModulate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Theme.tres" type="Theme" id=5]
+[ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=6]
+
+[node name="Tutorial1" type="Node"]
+
+[node name="Floor" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 131073, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 9, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 131082, 9, 0, 131083, 9, 0, 131084, 9, 0, 131085, 9, 0, 131086, 9, 0, 131087, 9, 0, 196611, 9, 0, 196622, 9, 0, 262158, 9, 0, 262159, 9, 0, 327695, 9, 0, 393223, 9, 0, 393224, 9, 0, 393225, 9, 0, 393226, 9, 0, 393227, 9, 0, 393228, 9, 0, 393229, 9, 0, 393231, 9, 0, 393232, 9, 0, 458759, 9, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 9, 0, 458764, 9, 0, 458765, 9, 0, 458767, 9, 0, 458768, 9, 0, 524295, 9, 0, 524296, 9, 0, 524297, 9, 0, 524298, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 9, 0, 524303, 9, 0, 524304, 9, 0, 589839, 9, 0 )
+
+[node name="Wall" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 262144, 1, 0, 262146, 2, 0, 262146, 3, 0, 262146, 4, 0, 262146, 5, 0, 262146, 6, 0, 262146, 7, 0, 262146, 8, 0, 262146, 9, 0, 262146, 10, 0, 262146, 11, 0, 262146, 12, 0, 262146, 13, 0, 262146, 14, 0, 262146, 15, 0, 262146, 16, 0, 262145, 65536, 0, 327682, 65552, 0, 327682, 131072, 0, 327682, 131088, 0, 327682, 196608, 0, 327680, 196609, 0, 262146, 196610, 0, 262146, 196611, 0, 262146, 196612, 0, 262146, 196613, 0, 524292, 196614, 0, 458756, 196615, 0, 458756, 196616, 0, 458756, 196617, 0, 458756, 196618, 0, 458756, 196619, 0, 458756, 196620, 0, 458756, 196621, 0, 262152, 196623, 0, 327686, 196624, 0, 327684, 262149, 0, 393220, 262150, 0, 393222, 262151, 0, 393222, 262152, 0, 393222, 262153, 0, 393222, 262154, 0, 393222, 262155, 0, 393222, 262156, 0, 393222, 262157, 0, 393221, 262160, 0, 327682, 327685, 0, 393220, 327686, 0, 393216, 327687, 0, 458757, 327688, 0, 458757, 327689, 0, 458757, 327690, 0, 458757, 327691, 0, 458757, 327692, 0, 458757, 327693, 0, 589829, 327694, 0, 262145, 327696, 0, 327682, 393221, 0, 393220, 393222, 0, 393221, 393230, 0, 327682, 393232, 0, 327682, 458757, 0, 393220, 458758, 0, 393221, 458764, 0, 327685, 458766, 0, 262150, 458768, 0, 327682, 524293, 0, 393220, 524294, 0, 393221, 524300, 0, 327682, 524304, 0, 327682, 589829, 0, 393220, 589830, 0, 458752, 589831, 0, 458756, 589832, 0, 458756, 589833, 0, 458756, 589834, 0, 458756, 589835, 0, 458756, 589836, 0, 393219, 589837, 0, 458756, 589838, 0, 262152, 589840, 0, 327682, 655365, 0, 327687, 655366, 0, 458757, 655367, 0, 458757, 655368, 0, 458757, 655369, 0, 458757, 655370, 0, 458757, 655371, 0, 458757, 655372, 0, 458757, 655373, 0, 458757, 655374, 0, 589829, 655375, 0, 262146, 655376, 0, 327681 )
+
+[node name="CanvasModulate" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 210, 150 )
+disguised_slowdown = 0.25
+
+[node name="Label" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 400.0
+margin_top = 120.0
+margin_right = 903.0
+margin_bottom = 145.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 5 )
+text = "Press space to change vision modes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Theme", "Visibility" ]
+
+[node name="Light2D" type="Light2D" parent="." index="5"]
+
+position = Vector2( 1040.17, 185.011 )
+rotation = -2.89731
+enabled = true
+editor_only = false
+texture = ExtResource( 6 )
+offset = Vector2( 320, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="Light2D2" type="Light2D" parent="." index="6"]
+
+position = Vector2( 225.121, 195.032 )
+rotation = -0.304555
+enabled = true
+editor_only = false
+texture = ExtResource( 6 )
+offset = Vector2( 320, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+

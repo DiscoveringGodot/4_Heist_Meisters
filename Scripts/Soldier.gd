@@ -28,8 +28,10 @@ func make_path():
 	
 
 func update_path():
-	if path.size() == 1 and $Timer.is_stopped():
-		$Timer.start()
+	if path.size() == 1:
+		if $Timer.is_stopped(): # Seperate if condition to prevent moving to the else too early
+			$Timer.start()
+
 	else: 
 		path.remove(0)
 
