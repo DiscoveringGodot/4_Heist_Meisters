@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tilesets/autotilewalls.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Locked_Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Combination.tscn" type="PackedScene" id=5]
+
+[node name="Level2" type="Node" index="0"]
+
+[node name="Walls" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65550, 0, 327686, 65551, 0, 262146, 65552, 0, 262149, 131084, 0, 327686, 131085, 0, 262149, 131089, 0, 458758, 196619, 0, 458758, 196626, 0, 458758, 196635, 0, 327686, 196636, 0, 262146, 196637, 0, 262146, 196638, 0, 262149, 262149, 0, 262151, 262150, 0, 458756, 262151, 0, 458756, 262152, 0, 458756, 262153, 0, 458756, 262154, 0, 262152, 262163, 0, 327685, 262166, 0, 327686, 262167, 0, 262146, 262168, 0, 262146, 262169, 0, 262146, 262170, 0, 262149, 262175, 0, 327686, 262176, 0, 262146, 262177, 0, 262149, 262182, 0, 327686, 262183, 0, 262146, 262184, 0, 262145, 327685, 0, 589826, 327686, 0, 458757, 327687, 0, 458757, 327688, 0, 458757, 327689, 0, 458757, 327690, 0, 589829, 327691, 0, 262149, 327699, 0, 327680, 327700, 0, 262146, 327701, 0, 262149, 327714, 0, 327686, 327715, 0, 262146, 327716, 0, 262146, 327717, 0, 262149, 327720, 0, 327682, 393221, 0, 327682, 393256, 0, 327682, 458757, 0, 327682, 458792, 0, 327682, 524293, 0, 327682, 524305, 0, 327685, 524328, 0, 262150, 589829, 0, 327682, 589841, 0, 327682, 589863, 0, 327685, 655365, 0, 327682, 655377, 0, 327682, 655393, 0, 327686, 655394, 0, 262145, 655399, 0, 262150, 720901, 0, 327682, 720913, 0, 327682, 720927, 0, 327686, 720928, 0, 262149, 720930, 0, 262150, 720934, 0, 458758, 786437, 0, 327682, 786449, 0, 327682, 786460, 0, 327686, 786461, 0, 262146, 786462, 0, 262149, 786467, 0, 327686, 786468, 0, 262146, 786469, 0, 262149, 851973, 0, 327682, 851985, 0, 327682, 851993, 0, 262151, 851994, 0, 458756, 851995, 0, 262152, 917509, 0, 262150, 917511, 0, 327686, 917512, 0, 262146, 917513, 0, 262146, 917514, 0, 262146, 917515, 0, 262146, 917516, 0, 262146, 917517, 0, 262146, 917518, 0, 262146, 917519, 0, 262146, 917520, 0, 262147, 917521, 0, 262148, 917522, 0, 262146, 917523, 0, 262146, 917524, 0, 262146, 917525, 0, 262146, 917526, 0, 262146, 917527, 0, 262146, 917528, 0, 262146, 917529, 0, 589828, 917530, 0, 458757, 917531, 0, 589829, 917532, 0, 262145, 983044, 0, 327685, 983056, 0, 327682, 983068, 0, 262150, 1048580, 0, 327682, 1048592, 0, 327682, 1048603, 0, 327685, 1114116, 0, 327680, 1114117, 0, 262146, 1114118, 0, 262146, 1114119, 0, 262146, 1114120, 0, 262146, 1114121, 0, 262146, 1114122, 0, 262146, 1114123, 0, 262149, 1114128, 0, 327682, 1114139, 0, 262150, 1179660, 0, 327686, 1179661, 0, 262146, 1179662, 0, 262146, 1179663, 0, 262146, 1179664, 0, 327681, 1179674, 0, 458758, 1245201, 0, 327686, 1245202, 0, 262146, 1245203, 0, 262146, 1245204, 0, 262146, 1245205, 0, 262149, 1245209, 0, 327685, 1310742, 0, 327686, 1310743, 0, 262146, 1310744, 0, 262146, 1310745, 0, 327681 )
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = null
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 520, 520 )
+
+[node name="Doors" type="Node" parent="." index="3"]
+
+[node name="Locked_Door" parent="Doors" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 380, 920 )
+
+[node name="Computers" type="Node" parent="." index="4"]
+
+[node name="Computer" parent="Computers" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 950, 640 )
+id = "1"
+
+[node name="Combination" parent="." index="5" instance=ExtResource( 5 )]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
+
+

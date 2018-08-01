@@ -391,21 +391,29 @@ editor/display_folded = true
 
 position = Vector2( 640, 256 )
 collision/safe_margin = 0.08
+nav_stop_threshold = 5
+walk_slowdown = 0.5
 
 [node name="Soldier2" parent="Soldiers" index="1" instance=ExtResource( 12 )]
 
 position = Vector2( 2464, 160 )
 collision/safe_margin = 0.08
+nav_stop_threshold = 5
+walk_slowdown = 0.5
 
 [node name="Soldier3" parent="Soldiers" index="2" instance=ExtResource( 12 )]
 
 position = Vector2( 1152, 448 )
 collision/safe_margin = 0.08
+nav_stop_threshold = 5
+walk_slowdown = 0.5
 
 [node name="Soldier4" parent="Soldiers" index="3" instance=ExtResource( 12 )]
 
 position = Vector2( 512, 704 )
 collision/safe_margin = 0.08
+nav_stop_threshold = 5
+walk_slowdown = 0.5
 
 [node name="Computers" type="Node" parent="." index="9"]
 
@@ -597,9 +605,9 @@ margin_top = 60.0
 margin_right = 590.0
 margin_bottom = 120.0
 
-[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door2" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="Doors/Locked_Door" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="Doors/Locked_Door3" method="_on_Computer_combination"]
 
