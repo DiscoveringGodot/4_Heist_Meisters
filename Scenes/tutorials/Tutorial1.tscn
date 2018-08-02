@@ -172,6 +172,8 @@ script = ExtResource( 10 )
 
 [node name="Transitions" type="Node" parent="." index="8"]
 
+editor/display_folded = true
+
 [node name="MovementComplete" type="Area2D" parent="Transitions" index="0"]
 
 position = Vector2( 588.515, 158.84 )
@@ -229,7 +231,7 @@ shape = SubResource( 1 )
 [node name="ObjectivePointer" type="Sprite" parent="." index="9"]
 
 editor/display_folded = true
-position = Vector2( 512.884, 140.38 )
+position = Vector2( 207.529, 328.982 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -259,11 +261,9 @@ shadow_item_cull_mask = 1
 
 [node name="ObjectiveMarkers" type="Node" parent="." index="10"]
 
-editor/display_folded = true
-
 [node name="Objective1" type="Position2D" parent="ObjectiveMarkers" index="0"]
 
-position = Vector2( 629.87, 164.652 )
+position = Vector2( 678.74, 109.266 )
 
 [node name="Objective2" type="Position2D" parent="ObjectiveMarkers" index="1"]
 

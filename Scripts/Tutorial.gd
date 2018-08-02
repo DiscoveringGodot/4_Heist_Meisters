@@ -31,14 +31,12 @@ func gui_transition():
 
 func move_marker():
 	var marker = $ObjectiveMarkers.get_child(0)
-	var objective_location = marker.position
 	$ObjectiveMarkers.remove_child(marker)
-	$ObjectivePointer.position = objective_location
+	$ObjectivePointer.position = marker.position
 
 
 func _on_MovementComplete_body_entered(body):
 	gui_transition()
-
 
 
 func _on_InteractionComplete_body_entered(body):
