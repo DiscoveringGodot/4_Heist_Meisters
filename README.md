@@ -35,20 +35,15 @@ Here are the lectures of the course for this section...
 
 
 ### 1 Designing Heist Meisters
-
-#### In this video (objectives)…
-
+#### In this video (objecties)…
 1 Discuss the game we're making 
-
 2 Examine the features we'll need to create
 
 #### After watching (learning outcomes)…
-
 Plan out the central mechanics and feeling of our tense, top-down stealth game!
 
 
 ### 2 Installing Assets for Heist Meisters
-
 #### In this video (objectives)…
 
 1 Where to find the assets
@@ -56,5 +51,12 @@ Plan out the central mechanics and feeling of our tense, top-down stealth game!
 3 a Quick overview of what's included
 
 #### After watching (learning outcomes)…
-
 Install the assets we'll need for our game
+
+### 3 Making a Character Scene
+#### In this video (objectives)…
+
+1 Create a Character scene and script as templates
+
+#### After watching (learning outcomes)…
+Understand how to use template scenes and scripts in your games
