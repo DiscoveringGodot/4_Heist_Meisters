@@ -60,3 +60,13 @@ Install the assets we'll need for our game
 
 #### After watching (learning outcomes)…
 Understand how to use template scenes and scripts in your games
+
+### 4 The Player Character
+#### In this video (objectives)…
+
+1 Create a Player scene that inherits from the Character scene
+2 Create a Player script that extends the Character script
+3 make the player character move and look at the mouse position
+
+#### After watching (learning outcomes)…
+Inheriting scenes and extending scripts
