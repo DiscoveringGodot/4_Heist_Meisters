@@ -70,3 +70,13 @@ Understand how to use template scenes and scripts in your games
 
 #### After watching (learning outcomes)…
 Inheriting scenes and extending scripts
+
+### 5 Turning a Tilemap into an Autotile
+#### In this video (objectives)…
+
+1 Set up an Autotile to make levels creation easy
+2 Add collision to our Autotile
+3 Create a basic test level
+
+#### After watching (learning outcomes)…
+Autotiles, Bitmasking and Auto-Collision
