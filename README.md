@@ -80,3 +80,12 @@ Inheriting scenes and extending scripts
 
 #### After watching (learning outcomes)…
 Autotiles, Bitmasking and Auto-Collision
+
+### 6 Adding Floors
+#### In this video (objectives)…
+
+1 Set up a quick and easy tilemap for floors
+2 Add floros to our level
+
+#### After watching (learning outcomes)…
+How to work with Tilemaps and Autotiles at the same time
