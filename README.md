@@ -89,3 +89,13 @@ Autotiles, Bitmasking and Auto-Collision
 
 #### After watching (learning outcomes)…
 How to work with Tilemaps and Autotiles at the same time
+
+### 7 Light2D Nodes
+#### In this video (objectives)…
+
+1 Set up a ``Light2D`` node
+2 Set up Occlusion is autotiles and characters
+2 Enable shadows
+
+#### After watching (learning outcomes)…
+How to bring dynamic lighting and shadows into a 2D game

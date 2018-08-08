@@ -7,6 +7,7 @@ func _process(delta):
 	update_motion(delta)
 	move_and_slide(motion)
 
+
 func update_motion(delta):
 	look_at(get_global_mouse_position())
 	
@@ -23,3 +24,15 @@ func update_motion(delta):
 		motion.x = clamp((motion.x + SPEED), 0, MAX_SPEED)
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)
+
+
+func _input(event):
+	if Input.is_action_just_pressed("ui_select"):
+		toggle_torch()
+
+
+func toggle_torch():
+	if $Torch.enabled:
+		$Torch.enabled = false
+	else:
+		$Torch.enabled = true
