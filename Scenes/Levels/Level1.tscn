@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Tilesets/FloorTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Tilesets/AutoTileWalls.tres" type="TileSet" id=3]
-[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tilesets/AutoTileWalls.tres" type="TileSet" id=4]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 [node name="Floors" type="TileMap" parent="." index="0"]
 
@@ -29,6 +29,7 @@ tile_data = PoolIntArray( 65538, 16, 0, 65539, 16, 0, 65540, 16, 0, 65541, 16, 0
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 position = Vector2( 524.244, 305.707 )
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
@@ -56,10 +57,28 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="Walls" type="TileMap" parent="." index="2"]
+[node name="SecurityCameras" type="Node2D" parent="." index="2"]
+
+[node name="SecurityCamera1" parent="SecurityCameras" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 74.5876, 289.703 )
+
+[node name="SecurityCamera2" parent="SecurityCameras" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 971.401, 497.269 )
+rotation = -1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="SecurityCamera3" parent="SecurityCameras" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 938.009, 140.781 )
+rotation = 1.5708
+_sections_unfolded = [ "Transform" ]
+
+[node name="Walls" type="TileMap" parent="." index="3"]
 
 mode = 0
-tile_set = ExtResource( 3 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -70,18 +89,15 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 0, 0, 262151, 1, 0, 524293, 2, 0, 262146, 3, 0, 262146, 4, 0, 262146, 5, 0, 262146, 6, 0, 262146, 7, 0, 262146, 8, 0, 262146, 9, 0, 262146, 10, 0, 262145, 65536, 0, 589826, 65537, 0, 327688, 65546, 0, 327683, 65547, 0, 262146, 65548, 0, 262146, 65549, 0, 262146, 65550, 0, 262146, 65551, 0, 262146, 65552, 0, 262146, 65553, 0, 262146, 65554, 0, 262145, 131072, 0, 327682, 131075, 0, 458758, 131079, 0, 458758, 131082, 0, 327682, 131090, 0, 327683, 131091, 0, 262146, 131092, 0, 262146, 131093, 0, 262146, 131094, 0, 262146, 131095, 0, 262145, 196608, 0, 327682, 196618, 0, 262150, 196621, 0, 458758, 196624, 0, 458758, 196626, 0, 262150, 196631, 0, 327682, 262144, 0, 327682, 262167, 0, 327682, 327680, 0, 327682, 327690, 0, 327685, 327693, 0, 458758, 327696, 0, 458758, 327698, 0, 327685, 327703, 0, 327682, 393216, 0, 327682, 393219, 0, 458758, 393223, 0, 458758, 393226, 0, 327682, 393234, 0, 327683, 393235, 0, 262146, 393236, 0, 262146, 393237, 0, 262146, 393238, 0, 262146, 393239, 0, 327681, 458752, 0, 524290, 458753, 0, 262152, 458762, 0, 327682, 458770, 0, 327682, 524288, 0, 327687, 524289, 0, 589829, 524290, 0, 262146, 524291, 0, 262146, 524292, 0, 262146, 524293, 0, 262146, 524294, 0, 262146, 524295, 0, 262145, 524297, 0, 327686, 524298, 0, 262148, 524299, 0, 262146, 524300, 0, 262146, 524301, 0, 524292, 524302, 0, 458756, 524303, 0, 458756, 524304, 0, 458756, 524305, 0, 458756, 524306, 0, 524291, 589831, 0, 327682, 589837, 0, 589826, 589838, 0, 458757, 589839, 0, 458757, 589840, 0, 458757, 589841, 0, 458757, 589842, 0, 589829, 589843, 0, 262146, 589844, 0, 262145, 655363, 0, 262144, 655364, 0, 262146, 655365, 0, 262146, 655366, 0, 262146, 655367, 0, 327681, 655373, 0, 262150, 655380, 0, 327682, 720899, 0, 327682, 720916, 0, 327682, 786435, 0, 327682, 786439, 0, 327685, 786445, 0, 327685, 786452, 0, 327682, 851971, 0, 327682, 851975, 0, 327682, 851981, 0, 327682, 851988, 0, 327682, 917507, 0, 327680, 917508, 0, 262146, 917509, 0, 262146, 917510, 0, 262146, 917511, 0, 262148, 917512, 0, 262146, 917513, 0, 262146, 917514, 0, 262146, 917515, 0, 262146, 917516, 0, 262146, 917517, 0, 327684, 917524, 0, 327682, 983053, 0, 327682, 983060, 0, 327682, 1048589, 0, 327682, 1048596, 0, 327682, 1114125, 0, 327680, 1114126, 0, 262146, 1114127, 0, 262146, 1114128, 0, 262146, 1114129, 0, 262146, 1114130, 0, 262146, 1114131, 0, 262146, 1114132, 0, 327681 )
+_sections_unfolded = [ "Collision" ]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
 
 color = Color( 0.0602417, 0.114655, 0.328125, 1 )
-
-[node name="Character" parent="." index="4" instance=ExtResource( 4 )]
-
-position = Vector2( 760, 290 )
 
 

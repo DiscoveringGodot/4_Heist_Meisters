@@ -99,3 +99,14 @@ How to work with Tilemaps and Autotiles at the same time
 
 #### After watching (learning outcomes)…
 How to bring dynamic lighting and shadows into a 2D game
+
+### 8 Making a Security Camera
+#### In this video (objectives)…
+
+1 Create a Security Camera
+2 Correctly set up the Torch node for it
+3 Add physics layers
+
+
+#### After watching (learning outcomes)…
+Get the security camera in game ready for the player detection system!
