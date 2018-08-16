@@ -107,6 +107,18 @@ How to bring dynamic lighting and shadows into a 2D game
 2 Correctly set up the Torch node for it
 3 Add physics layers
 
-
 #### After watching (learning outcomes)…
 Get the security camera in game ready for the player detection system!
+
+
+### 9 Player Detection Part 1 - Field of View
+
+#### In this video (objectives)…
+
+1 Set of FOV
+2 Calulate the npc's direction
+3 Get the dircection to the Player
+4 Determine if the NPC can see the Player
+
+#### After watching (learning outcomes)…
+Get the first phase of player detection set up!
