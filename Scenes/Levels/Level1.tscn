@@ -31,6 +31,7 @@ tile_data = PoolIntArray( 65538, 16, 0, 65539, 16, 0, 65540, 16, 0, 65541, 16, 0
 
 editor/display_folded = true
 position = Vector2( 524.244, 305.707 )
+collision_mask = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
 

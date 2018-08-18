@@ -1,5 +1,5 @@
 ﻿﻿# Discovering Godot - The Game Engine You've Been Waiting For
-## 
+##
 Section 4 - Heist Meisters
 
 This is GameDev.tv's guide to the free and open source Godot game engine.  Learn the free to use, free to modify, free to create engine with one of the most successful online game develeopment educational groups out there.
@@ -36,7 +36,7 @@ Here are the lectures of the course for this section...
 
 ### 1 Designing Heist Meisters
 #### In this video (objecties)…
-1 Discuss the game we're making 
+1 Discuss the game we're making
 2 Examine the features we'll need to create
 
 #### After watching (learning outcomes)…
@@ -115,10 +115,22 @@ Get the security camera in game ready for the player detection system!
 
 #### In this video (objectives)…
 
-1 Set of FOV
-2 Calulate the npc's direction
-3 Get the dircection to the Player
+1 Set up FOV
+2 Calculate the npc's direction
+3 Get the direction to the Player
 4 Determine if the NPC can see the Player
 
 #### After watching (learning outcomes)…
 Get the first phase of player detection set up!
+
+
+### 10 Player Detection Part 2 - Line of Sight
+
+#### In this video (objectives)…
+
+1 Draw a ray from the NPC to the Player
+2 Check what's intersecting the ray
+3 Check if the Player is in Range
+
+#### After watching (learning outcomes)…
+Finish off Player detection with Line of Sight and detection range

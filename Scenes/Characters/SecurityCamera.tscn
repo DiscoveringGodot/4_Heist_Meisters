@@ -42,7 +42,7 @@ _sections_unfolded = [ "Transform" ]
 
 input_pickable = false
 collision_layer = 4
-collision_mask = 0
+collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Transform" ]
@@ -64,6 +64,7 @@ _sections_unfolded = [ "Shadow", "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBody" index="2"]
 
 shape = SubResource( 1 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraBody" index="3"]
 
