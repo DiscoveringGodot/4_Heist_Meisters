@@ -7,8 +7,8 @@
 enabled = true
 editor_only = false
 texture = ExtResource( 1 )
-offset = Vector2( 0, 0 )
-texture_scale = 1.0
+offset = Vector2( 170, 0 )
+texture_scale = 0.5
 color = Color( 1, 1, 1, 1 )
 energy = 1.0
 mode = 0

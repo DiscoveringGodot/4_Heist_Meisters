@@ -134,3 +134,15 @@ Get the first phase of player detection set up!
 
 #### After watching (learning outcomes)…
 Finish off Player detection with Line of Sight and detection range
+
+
+### 11 Adding Guards
+
+#### In this video (objectives)…
+
+1 Create a Guard Scene that extends the PlayerDetection.gd script
+2 Fix the Torch scenes
+3 Populate/Recreate our level
+
+#### After watching (learning outcomes)…
+Get some Guards!

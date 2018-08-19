@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Guard.gd" type="Script" id=2]
+[ext_resource path="res://GFX/PNG/Soldier 1/soldier1_stand.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=4]
+
+[node name="Guard" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" parent="." index="2"]
+
+visible = false
+
+[node name="Torch" parent="." index="3" instance=ExtResource( 4 )]
+
+
