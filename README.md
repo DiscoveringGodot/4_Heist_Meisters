@@ -112,7 +112,6 @@ Get the security camera in game ready for the player detection system!
 
 
 ### 9 Player Detection Part 1 - Field of View
-
 #### In this video (objectives)…
 
 1 Set up FOV
@@ -125,7 +124,6 @@ Get the first phase of player detection set up!
 
 
 ### 10 Player Detection Part 2 - Line of Sight
-
 #### In this video (objectives)…
 
 1 Draw a ray from the NPC to the Player
@@ -137,7 +135,6 @@ Finish off Player detection with Line of Sight and detection range
 
 
 ### 11 Adding Guards
-
 #### In this video (objectives)…
 
 1 Create a Guard Scene that extends the PlayerDetection.gd script
@@ -146,3 +143,14 @@ Finish off Player detection with Line of Sight and detection range
 
 #### After watching (learning outcomes)…
 Get some Guards!
+
+
+### 12 Moving Guards Part 1- Navigation2D
+#### In this video (objectives)…
+
+1 Setting up ``Navigation2D``
+2 Creating a ``NavigationPolygonInstance``
+3 Using ``Position2D`` nodes to mark destinations
+
+#### After watching (learning outcomes)…
+Get pathfinding set up for HeistMeisters!
