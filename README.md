@@ -154,3 +154,16 @@ Get some Guards!
 
 #### After watching (learning outcomes)…
 Get pathfinding set up for HeistMeisters!
+
+
+### 13 Moving Guards Part 2- get_simple_path()
+#### In this video (objectives)…
+
+1 Using ``get_simple_path``
+2 Making sure that pathfinding works no matter wher we put our destinations
+3 Have the guard move along a pathfinding
+4 Have the guard wait at their destinations
+5 Troubleshooting guards getting stuck
+
+#### After watching (learning outcomes)…
+Have pathfinding and guard movement fully implemented
