@@ -10,7 +10,7 @@ You're welcome to download, fork or do whatever else legal with all the files! T
 
 ## In This Section
 
-Create a fun word game based on Madlibs while you get to grips with GDScript and the foundations of scripting.   
+Create a tense and dramatic top-down stealth game while you learn more advanced Godot techniques!
 (Our ref: HM_GDT)
 
 
@@ -178,3 +178,14 @@ Have pathfinding and guard movement fully implemented
 
 #### After watching (learning outcomes)…
 Install furniture in out level
+
+
+### 15 Nightvision Mode
+#### In this video (objectives)…
+
+1 Set up Nightvision
+2 Use an Enum to list possible vision modes
+3 Use ``call_group()`` to change vision modes
+
+#### After watching (learning outcomes)…
+Enable nightvision mode through enums and the amazing power of groups!
