@@ -167,3 +167,14 @@ Get pathfinding set up for HeistMeisters!
 
 #### After watching (learning outcomes)…
 Have pathfinding and guard movement fully implemented
+
+
+### 14 Adding Furniture With a Tilesheet
+#### In this video (objectives)…
+
+1 Setting up a Tilesheet
+2 Adding Collision and Occlusion to tiles
+3 Rotating Tiles
+
+#### After watching (learning outcomes)…
+Install furniture in out level
