@@ -17,11 +17,7 @@ Create a tense and dramatic top-down stealth game while you learn more advanced 
 
 ## How To Build / Compile
 
-This is a Godot project. If you're familiar with source control, then "clone this repo". Otherwise download the contents and place them in an empty folder that's in a convenient place.  Open Godot, ``Import Project`` and navigate to the folder you just made.  select ``project.godot`` and you're good to go.
-
-No compiling necessary!  This is Godot, after all.
-
-
+This is a Godot project. If you're familiar with source control, then "clone this repo". Otherwise download the contents and place them i
 
 This branch is the course branch, each commit corresponds to a lecture in the course. The current state is our latest progress.
 
@@ -189,3 +185,13 @@ Install furniture in out level
 
 #### After watching (learning outcomes)…
 Enable nightvision mode through enums and the amazing power of groups!
+
+
+### 16 Turning Off the Lights In Nightvision
+#### In this video (objectives)…
+
+1 Set up an NPC Group
+2 Use ``call_group()`` to have all NPCs switch torches on or off as needed
+
+#### After watching (learning outcomes)…
+Make all torches switch off when the Player is using Nightvision

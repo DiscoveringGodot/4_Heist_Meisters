@@ -144,8 +144,6 @@ autostart = false
 
 [node name="SecurityCameras" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="SecurityCamera1" parent="SecurityCameras" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 630.759, 241.268 )
@@ -219,7 +217,8 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="VisionMode" type="CanvasModulate" parent="." index="6"]
 
-color = Color( 0.169525, 0.789063, 0.169525, 1 )
+visible = false
+color = Color( 0.0588235, 0.113725, 0.32549, 1 )
 script = ExtResource( 8 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VisionMode" index="0"]
