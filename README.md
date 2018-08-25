@@ -195,3 +195,15 @@ Enable nightvision mode through enums and the amazing power of groups!
 
 #### After watching (learning outcomes)…
 Make all torches switch off when the Player is using Nightvision
+
+
+### 17 Making a Simple Door
+#### In this video (objectives)…
+
+1 Use an ``Input_event()`` function to detect if a player is clicking on a door
+2 Only allow players to open a door if in range
+3 Set up different logic for NPCs and players using doors
+4 Add sound effects to doors
+
+#### After watching (learning outcomes)…
+Create simple doors that open if the player is in range and clicks on them!

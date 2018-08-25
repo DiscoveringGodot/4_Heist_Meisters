@@ -11,5 +11,5 @@ dest_files=[ "res://.import/doorClose_4.ogg-5c2426aceeaef7fdabd00193aab3704c.ogg
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
