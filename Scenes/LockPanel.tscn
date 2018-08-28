@@ -583,28 +583,6 @@ wait_time = 0.5
 one_shot = true
 autostart = false
 
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button1" to="." method="_on_Button1_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button2" to="." method="_on_Button2_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button3" to="." method="_on_Button3_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button4" to="." method="_on_Button4_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button5" to="." method="_on_Button5_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button6" to="." method="_on_Button6_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button7" to="." method="_on_Button7_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button8" to="." method="_on_Button8_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button9" to="." method="_on_Button9_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Button0" to="." method="_on_Button0_pressed"]
-
-[connection signal="pressed" from="VSplitContainer/CenterContainer2/GridContainer/Enter" to="." method="_on_Enter_pressed"]
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
