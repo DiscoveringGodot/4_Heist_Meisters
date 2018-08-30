@@ -10,22 +10,19 @@ You're welcome to download, fork or do whatever else legal with all the files! T
 
 ## In This Section
 
-Create a tense and dramatic top-down stealth game while you learn more advanced Godot techniques!
+reate a tense and dramatic top-down stealth game while you learn more advanced Godot techniques!
 (Our ref: HM_GDT)
 
 
 
 ## How To Build / Compile
-
-This is a Godot project. If you're familiar with source control, then "clone this repo". Otherwise download the contents and place them i
+This is a Godot project. If you're familiar with source control, then "clone this repo". Otherwise download the contents and place them in your projects folder, then import the project in Godot's launcher.
 
 This branch is the course branch, each commit corresponds to a lecture in the course. The current state is our latest progress.
 
 
 
 ## Lecture List
-
-
 Here are the lectures of the course for this section...
 
 
@@ -207,3 +204,15 @@ Make all torches switch off when the Player is using Nightvision
 
 #### After watching (learning outcomes)…
 Create simple doors that open if the player is in range and clicks on them!
+
+
+### 18 Beautiful Security - Using Themes
+#### In this video (objectives)…
+
+1 Create a Numberpad as a ``Popup`` Node
+2 Use ``Container`` nodes to organise the Numberpad
+3 Use Grid Container to organise the buttons
+4 Beautify the Numperpad with a Theme
+
+#### After watching (learning outcomes)…
+Learn the wonder of Themes in Godot!

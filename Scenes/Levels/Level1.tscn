@@ -124,24 +124,6 @@ position = Vector2( 669.654, 669.654 )
 rotation = 1.5708
 _sections_unfolded = [ "Transform" ]
 
-[node name="Door3" parent="Doors" index="2" instance=ExtResource( 4 )]
-
-position = Vector2( 97.4699, 798.712 )
-rotation = 1.5708
-_sections_unfolded = [ "Transform" ]
-
-[node name="Door4" parent="Doors" index="3" instance=ExtResource( 4 )]
-
-position = Vector2( 95.6649, 609.187 )
-rotation = 1.5708
-_sections_unfolded = [ "Transform" ]
-
-[node name="Door5" parent="Doors" index="4" instance=ExtResource( 4 )]
-
-position = Vector2( 96.2971, 990.848 )
-rotation = 1.5708
-_sections_unfolded = [ "Transform" ]
-
 [node name="Player" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 104.781, 260.56 )
