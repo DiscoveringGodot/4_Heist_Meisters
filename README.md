@@ -216,3 +216,15 @@ Create simple doors that open if the player is in range and clicks on them!
 
 #### After watching (learning outcomes)…
 Learn the wonder of Themes in Godot!
+
+
+### 19 Making a Locked Door Part 1
+#### In this video (objectives)…
+
+1 Fix the bug that causes all doors to open when the level loads
+2 Create Locked door that inherits the Door scene and extends the Door scripts
+3 Have the Numberpad popup when the player clicks on a locked door
+
+
+#### After watching (learning outcomes)…
+Simple debugging techniques and how to show and hide ``Popup`` nodes
