@@ -1,10 +1,12 @@
 extends Popup
 
-onready var door = get_parent().get_parent()
 onready var display = $VSplitContainer/CenterContainer/Display
 onready var light = $VSplitContainer/CenterContainer2/GridContainer/Light
 
 var guess =[]
+var combination = []
+
+signal combination_correct
 
 func _ready():
 	connect_buttons()
@@ -20,12 +22,12 @@ func enter(button):
 
 func update_display():
 	display.bbcode_text ="[center]" + PoolStringArray(guess).join("") + "[/center]"
-	if guess.size() == door.combination.size():
+	if guess.size() == combination.size():
 		check_guess()
 
 
 func check_guess():
-	if guess == door.combination:
+	if guess == combination:
 		$Timer.start()
 		light.texture = load(global.green_light)
 	else:
@@ -43,7 +45,6 @@ func connect_buttons():
 			button.connect("pressed", self, "_on_Button_pressed", [button.text])
 
 
-# TODO change to _on_Number_Button_pressed(num)
 func _on_Button_pressed(button):
 	if button == "Ok":
 		check_guess()
@@ -54,4 +55,4 @@ func _on_Button_pressed(button):
 func _on_Timer_timeout():
 	$AudioStreamPlayer.stream = load(global.tone_2)
 	$AudioStreamPlayer.play()
-	door.open("")
+	emit_signal("combination_correct")

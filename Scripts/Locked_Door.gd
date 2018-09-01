@@ -18,6 +18,7 @@ func _input_event(viewport, event, shape_idx):
 
 func _on_Computer_combination(numbers, id):
 	combination = numbers
+	lock.combination = numbers
 	set_label(id)
 
 
@@ -38,3 +39,8 @@ func set_night_vision_on():
 
 func set_night_vision_off():  # TODO consider naming convention for these group "messages"
 	$Label.visible = false
+
+func _on_Numberpad_lock_combination_correct():
+	open(null)
+
+
