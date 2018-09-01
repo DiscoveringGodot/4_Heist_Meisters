@@ -228,3 +228,17 @@ Learn the wonder of Themes in Godot!
 
 #### After watching (learning outcomes)…
 Simple debugging techniques and how to show and hide ``Popup`` nodes
+
+
+### 20 Making a Locked Door Part 2 - Wiring the Lock
+#### In this video (objectives)…
+
+1 Use a ``for`` loop to get all the children of ButtonGrid
+2 Connect all the buttons to the script with a signal
+3 Use the text label of each button as an argument
+4 Display the Player's button input
+5 Check if the Player's guess is correct
+
+
+#### After watching (learning outcomes)…
+Wire up the Numberpad to the Locked Door
