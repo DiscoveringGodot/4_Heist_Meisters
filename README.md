@@ -225,7 +225,6 @@ Learn the wonder of Themes in Godot!
 2 Create Locked door that inherits the Door scene and extends the Door scripts
 3 Have the Numberpad popup when the player clicks on a locked door
 
-
 #### After watching (learning outcomes)…
 Simple debugging techniques and how to show and hide ``Popup`` nodes
 
@@ -239,6 +238,15 @@ Simple debugging techniques and how to show and hide ``Popup`` nodes
 4 Display the Player's button input
 5 Check if the Player's guess is correct
 
-
 #### After watching (learning outcomes)…
 Wire up the Numberpad to the Locked Door
+
+
+### 21 Making a Locked Door Part 3 - Finishing Off Locked Doors
+#### In this video (objectives)…
+
+1 Have the Locked Door open when the combination is Correct
+2 Add sounds to our numberpad
+
+#### After watching (learning outcomes)…
+Make locked doors fully functional and polished!
