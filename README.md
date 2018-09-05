@@ -250,3 +250,13 @@ Wire up the Numberpad to the Locked Door
 
 #### After watching (learning outcomes)…
 Make locked doors fully functional and polished!
+
+
+### 22 Generating Combinations
+#### In this video (objectives)…
+
+1 Create a node responsible for generating all combinations on a level
+2 use ``return`` to send the combination to whatever function asked for it
+
+#### After watching (learning outcomes)…
+Take advantage of Godot's Object Orientation to make a node that generates all combinations!
