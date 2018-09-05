@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Computer.gd" type="Script" id=1]
+[ext_resource path="res://GFX/PNG/Tiles/tile_537.png" type="Texture" id=2]
+[ext_resource path="res://GFX/PNG/Tiles/tile_519.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/ComputerPopup.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 48, 64 )
+
+[node name="Computer" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable" ]
+combination_length = 4
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+rotation = 1.5708
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 32, 0 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light2D" type="Light2D" parent="." index="2"]
+
+rotation = 1.5708
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, -32 )
+texture_scale = 1.0
+color = Color( 0.372711, 0.616712, 0.691406, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="ComputerPopup" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
+
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_Computer_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_Computer_body_exited"]
+
+

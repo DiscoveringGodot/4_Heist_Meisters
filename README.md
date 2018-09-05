@@ -7,12 +7,10 @@ This is GameDev.tv's guide to the free and open source Godot game engine.  Learn
 You're welcome to download, fork or do whatever else legal with all the files! The real value is in our huge, high-quality online tutorials that accompany this repo.
 
 
-
 ## In This Section
 
 reate a tense and dramatic top-down stealth game while you learn more advanced Godot techniques!
 (Our ref: HM_GDT)
-
 
 
 ## How To Build / Compile
@@ -21,10 +19,8 @@ This is a Godot project. If you're familiar with source control, then "clone thi
 This branch is the course branch, each commit corresponds to a lecture in the course. The current state is our latest progress.
 
 
-
 ## Lecture List
 Here are the lectures of the course for this section...
-
 
 
 ### 1 Designing Heist Meisters
@@ -260,3 +256,15 @@ Make locked doors fully functional and polished!
 
 #### After watching (learning outcomes)…
 Take advantage of Godot's Object Orientation to make a node that generates all combinations!
+
+
+### 23 Computers and Combinations
+#### In this video (objectives)…
+
+1 Create a Computer Scene
+2 Using ``find_node()`` to get a node by name
+4 Ask CombinationGenerator for a random combinations
+5 Display that combination to the Player in a ``Popup``
+
+#### After watching (learning outcomes)…
+Using a returned value from one script to change the contents of another
