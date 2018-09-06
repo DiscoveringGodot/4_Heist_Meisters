@@ -268,3 +268,14 @@ Take advantage of Godot's Object Orientation to make a node that generates all c
 
 #### After watching (learning outcomes)…
 Using a returned value from one script to change the contents of another
+
+
+### 24 Linking Computers and Locked Doors
+#### In this video (objectives)…
+
+1 Link computers to individual or multiple locked doors
+2 Allow locked doors to open if the player approaches a specific side
+
+
+#### After watching (learning outcomes)…
+Use signals with an argument to set the combination of one or more locked doors at a time

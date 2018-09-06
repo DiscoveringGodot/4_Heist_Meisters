@@ -112,7 +112,6 @@ tile_data = PoolIntArray( -131061, 1, 0, -131060, 1, 0, -131059, 1, 0, -131058, 
 
 [node name="Doors" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 4 )]
@@ -121,13 +120,7 @@ position = Vector2( 286.063, 800.484 )
 rotation = -1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Door2" parent="Doors" index="1" instance=ExtResource( 4 )]
-
-position = Vector2( 670.529, 287.862 )
-rotation = -1.5708
-_sections_unfolded = [ "Collision", "Transform" ]
-
-[node name="Door3" parent="Doors" index="2" instance=ExtResource( 4 )]
+[node name="Door3" parent="Doors" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 1186.18, 481.053 )
 rotation = -1.5708
@@ -135,12 +128,23 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="LockedDoors" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 672.384, 673.568 )
+rotation = 1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="LockedDoor2" parent="LockedDoors" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 671.858, 289.263 )
+rotation = 1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="LockedDoor3" parent="LockedDoors" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 1314.1, 864.598 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
@@ -266,6 +270,14 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 481.195, 866.67 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+combination_length = 3
+
+[node name="Computer2" parent="Computers" index="1" instance=ExtResource( 10 )]
+
+position = Vector2( 1058.64, 986.436 )
+rotation = 1.5708
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+combination_length = 5
 
 [node name="VisionMode" type="CanvasModulate" parent="." index="9"]
 
@@ -310,5 +322,11 @@ rotation = -3.33341
 [node name="CombinationGenerator" parent="." index="11" instance=ExtResource( 13 )]
 
 [connection signal="timeout" from="Player/VisionModeTimer" to="Player" method="_on_VisionModeTimer_timeout"]
+
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer2" to="LockedDoors/LockedDoor3" method="_on_Computer_combination"]
 
 

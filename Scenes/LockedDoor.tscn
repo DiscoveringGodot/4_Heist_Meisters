@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/LockedDoor.gd" type="Script" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/NumberPad.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
 
 [node name="LockedDoor" instance=ExtResource( 1 )]
 
@@ -29,6 +34,26 @@ visible = false
 margin_right = 300.0
 margin_bottom = 400.0
 
+[node name="ExitDetection" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDetection" index="0"]
+
+position = Vector2( 0, -24 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
 [connection signal="combination_correct" from="CanvasLayer/NumberPad" to="." method="_on_NumberPad_combination_correct"]
+
+[connection signal="body_entered" from="ExitDetection" to="." method="_on_ExitDetection_body_entered"]
 
 
