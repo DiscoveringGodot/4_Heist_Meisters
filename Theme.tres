@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=2]
+[gd_resource type="Theme" load_steps=12 format=2]
 
 [ext_resource path="res://GFX/Interface/Fonts/kenvector_future_thin.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_green.png" type="Texture" id=2]
@@ -73,6 +73,14 @@ draw_center = true
 
 [sub_resource type="DynamicFont" id=5]
 
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
 size = 30
 use_mipmaps = true
 use_filter = true
@@ -81,7 +89,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [resource]
 
-default_font = SubResource( 5 )
+default_font = SubResource( 6 )
 Button/colors/font_color = Color( 0, 0, 0, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -93,6 +101,14 @@ Button/styles/focus = null
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 4 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 5 )
+Label/styles/normal = null
 RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
 RichTextLabel/colors/font_color_selected = Color( 0.490196, 0.490196, 0.490196, 1 )
 RichTextLabel/colors/selection_color = Color( 0.1, 0.1, 1, 0.8 )
@@ -106,5 +122,5 @@ RichTextLabel/fonts/mono_font = null
 RichTextLabel/fonts/normal_font = null
 RichTextLabel/styles/focus = null
 RichTextLabel/styles/normal = null
-_sections_unfolded = [ "Button", "Button/colors", "Button/styles", "RichTextLabel/colors" ]
+_sections_unfolded = [ "Button", "Button/colors", "Button/styles", "Label", "Label/fonts", "RichTextLabel/colors" ]
 

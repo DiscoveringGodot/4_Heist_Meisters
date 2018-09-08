@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Computer.gd" type="Script" id=1]
 [ext_resource path="res://GFX/PNG/Tiles/tile_537.png" type="Texture" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_519.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/ComputerPopup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Theme.tres" type="Theme" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,6 +24,7 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable" ]
 combination_length = 4
+lock_group = "Unset"
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -73,6 +75,31 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 [node name="ComputerPopup" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
 
 visible = false
+
+[node name="Label" type="Label" parent="." index="4" groups=[
+"labels",
+]]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -70.0
+margin_top = -12.0
+margin_right = -18.0
+margin_bottom = 11.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 5 )
+text = "Test"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
 
 [connection signal="body_entered" from="." to="." method="_on_Computer_body_entered"]
 

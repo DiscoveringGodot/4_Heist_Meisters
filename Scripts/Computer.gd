@@ -4,6 +4,7 @@ var can_click = false
 var combination
 
 export var combination_length = 4
+export var lock_group = "Unset"
 
 signal combination
 
@@ -11,7 +12,9 @@ signal combination
 func _ready():
 	$Light2D.enabled = false
 	generate_combination()
-	emit_signal("combination", combination)
+	emit_signal("combination", combination, lock_group)
+	$Label.rect_rotation = -rotation_degrees
+	$Label.text = lock_group
 
 
 func generate_combination():

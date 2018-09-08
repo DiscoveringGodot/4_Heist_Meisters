@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Destination.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scripts/VisionMode.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Theme.tres" type="Theme" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -271,6 +272,7 @@ position = Vector2( 481.195, 866.67 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 combination_length = 3
+lock_group = "1"
 
 [node name="Computer2" parent="Computers" index="1" instance=ExtResource( 10 )]
 
@@ -278,6 +280,7 @@ position = Vector2( 1058.64, 986.436 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 combination_length = 5
+lock_group = "R&D Office"
 
 [node name="VisionMode" type="CanvasModulate" parent="." index="9"]
 
@@ -321,11 +324,63 @@ rotation = -3.33341
 
 [node name="CombinationGenerator" parent="." index="11" instance=ExtResource( 13 )]
 
+[node name="Map Labels" type="Node2D" parent="." index="12"]
+
+[node name="MainOfficeLabel" type="Label" parent="Map Labels" index="0" groups=[
+"labels",
+]]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1410.0
+margin_top = 279.0
+margin_right = 1544.0
+margin_bottom = 302.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 14 )
+text = "Main Office"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="BathroomLabel" type="Label" parent="Map Labels" index="1" groups=[
+"labels",
+]]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 125.0
+margin_top = 597.0
+margin_right = 252.0
+margin_bottom = 620.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 14 )
+text = "Bathrooms"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
 [connection signal="timeout" from="Player/VisionModeTimer" to="Player" method="_on_VisionModeTimer_timeout"]
 
-[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="LockedDoors/LockedDoor3" method="_on_Computer_combination"]
 

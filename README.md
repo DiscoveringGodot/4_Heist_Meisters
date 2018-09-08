@@ -24,7 +24,7 @@ Here are the lectures of the course for this section...
 
 
 ### 1 Designing Heist Meisters
-#### In this video (objecties)…
+#### In this video (objectives)…
 1 Discuss the game we're making
 2 Examine the features we'll need to create
 
@@ -279,3 +279,14 @@ Using a returned value from one script to change the contents of another
 
 #### After watching (learning outcomes)…
 Use signals with an argument to set the combination of one or more locked doors at a time
+
+
+### 25 Labels, Locks and Nightvision
+#### In this video (objectives)…
+
+1 Label Computers and Locked Doors
+2 Rotate labels automatically
+3 Only show labels in Nightvision mode
+
+#### After watching (learning outcomes)…
+Turn Nightvision Mode into a strategic layer but revealing helpful information to the player
