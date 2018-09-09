@@ -290,3 +290,13 @@ Use signals with an argument to set the combination of one or more locked doors 
 
 #### After watching (learning outcomes)…
 Turn Nightvision Mode into a strategic layer but revealing helpful information to the player
+
+
+### 26 TextureProgress Nodes
+#### In this video (objectives)…
+
+1 How to use ``TextureProgres`` nodes
+2 How to change values in the inspector and have them reflected in an already running game
+
+#### After watching (learning outcomes)…
+Unleash the power of ``TextureProgress`` nodes!
