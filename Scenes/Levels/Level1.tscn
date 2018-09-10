@@ -381,9 +381,9 @@ _sections_unfolded = [ "Theme" ]
 
 [connection signal="timeout" from="Player/VisionModeTimer" to="Player" method="_on_VisionModeTimer_timeout"]
 
-[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="LockedDoors/LockedDoor3" method="_on_Computer_combination"]
 

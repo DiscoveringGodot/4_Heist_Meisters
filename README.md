@@ -300,3 +300,14 @@ Turn Nightvision Mode into a strategic layer but revealing helpful information t
 
 #### After watching (learning outcomes)…
 Unleash the power of ``TextureProgress`` nodes!
+
+
+### 27 Making NPCs Suspicious
+#### In this video (objectives)…
+
+1 Using ``TextureProgress`` as game logic
+2 Adding stealth to our stealth game!
+3 Quitting the game
+
+#### After watching (learning outcomes)…
+Update the GUI when the NPCs see the player!
