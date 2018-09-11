@@ -154,7 +154,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 editor/display_folded = true
 position = Vector2( 104.781, 260.56 )
-collision_mask = 0
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
 
@@ -381,9 +380,9 @@ _sections_unfolded = [ "Theme" ]
 
 [connection signal="timeout" from="Player/VisionModeTimer" to="Player" method="_on_VisionModeTimer_timeout"]
 
-[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
-
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
+
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="LockedDoors/LockedDoor3" method="_on_Computer_combination"]
 

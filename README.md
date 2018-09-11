@@ -311,3 +311,14 @@ Unleash the power of ``TextureProgress`` nodes!
 
 #### After watching (learning outcomes)…
 Update the GUI when the NPCs see the player!
+
+
+### 28 Sneaking Around In A Box
+#### In this video (objectives)…
+
+1 Implement a disguise system
+2 change ``collision_layer`` information in script
+3 save and load occlusion
+
+#### After watching (learning outcomes)…
+Fulfil your dream of hiding in a box!
