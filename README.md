@@ -322,3 +322,14 @@ Update the GUI when the NPCs see the player!
 
 #### After watching (learning outcomes)…
 Fulfil your dream of hiding in a box!
+
+
+### 29 Making Disguises Risky
+#### In this video (objectives)…
+
+1 Limit the number of disguises
+2 Slow the player down when wearing a disguise
+3 Have a time limit on disguises
+
+#### After watching (learning outcomes)…
+Display a certain number of decimal places in a text field and add a cost to disguises
