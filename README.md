@@ -333,3 +333,13 @@ Fulfil your dream of hiding in a box!
 
 #### After watching (learning outcomes)…
 Display a certain number of decimal places in a text field and add a cost to disguises
+
+
+### 30 Boxes and ItemList
+#### In this video (objectives)…
+
+1 Display the number of disguises left as a nuber of icons
+2 Update the GUI with very little code
+
+#### After watching (learning outcomes)…
+Use ``ItemList`` nodes to make polished GUI elements easily

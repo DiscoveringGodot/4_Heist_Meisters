@@ -16,6 +16,7 @@ func _ready():
 	Global.Player = self
 	vision_mode = DARK
 	$Timer.wait_time = disguise_duration
+	update_disguise_display()
 	reveal()
 
 
@@ -96,9 +97,11 @@ func disguise():
 	$Timer.start()
 	
 	disguises -=1
+	update_disguise_display()
 	disguised = true
 
-
+func update_disguise_display():
+	get_tree().call_group("DisguiseDisplay", "update_disguises", disguises)
 
 
 
