@@ -338,8 +338,19 @@ Display a certain number of decimal places in a text field and add a cost to dis
 ### 30 Boxes and ItemList
 #### In this video (objectives)…
 
-1 Display the number of disguises left as a nuber of icons
+1 Display the number of disguises left as a number of icons
 2 Update the GUI with very little code
 
 #### After watching (learning outcomes)…
 Use ``ItemList`` nodes to make polished GUI elements easily
+
+
+### 31 Grabbing the Loot
+#### In this video (objectives)…
+
+1 Have loot that the player can pick up
+2 Create an exit that works if the player has loot
+2 Craft an Object Oriented inventory system
+
+#### After watching (learning outcomes)…
+Create an inventory system in the SceneTree

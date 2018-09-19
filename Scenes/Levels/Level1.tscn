@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Destination.gd" type="Script" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Theme.tres" type="Theme" id=14]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Briefcase.tscn" type="PackedScene" id=17]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -146,13 +148,18 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="LockedDoor3" parent="LockedDoors" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 1314.1, 864.598 )
+position = Vector2( 1757.02, 485.246 )
 rotation = 1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="LockedDoor4" parent="LockedDoors" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 1824.54, 347.74 )
+rotation = 3.14528
 _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Player" parent="." index="4" instance=ExtResource( 6 )]
 
-editor/display_folded = true
 position = Vector2( 104.781, 260.56 )
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
@@ -276,8 +283,8 @@ lock_group = "1"
 
 [node name="Computer2" parent="Computers" index="1" instance=ExtResource( 10 )]
 
-position = Vector2( 1058.64, 986.436 )
-rotation = 1.5708
+position = Vector2( 1614.81, 801.045 )
+rotation = -0.0206575
 _sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 combination_length = 5
 lock_group = "R&D Office"
@@ -377,6 +384,17 @@ max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
 [node name="GUI" parent="." index="13" instance=ExtResource( 15 )]
+
+[node name="Exit" parent="." index="14" instance=ExtResource( 16 )]
+
+margin_left = 406.0
+margin_top = 62.0
+margin_right = 643.0
+margin_bottom = 176.0
+
+[node name="Briefcase" parent="." index="15" instance=ExtResource( 17 )]
+
+position = Vector2( 2007.35, 701.768 )
 
 [connection signal="timeout" from="Player/VisionModeTimer" to="Player" method="_on_VisionModeTimer_timeout"]
 
