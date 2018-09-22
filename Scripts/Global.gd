@@ -15,6 +15,7 @@ var green_light = "res://GFX/Interface/PNG/dotGreen.png"
 
 var box_sprite = "res://GFX/PNG/Tiles/tile_129.png"
 var player_sprite = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
+var briefcase_sprite = "res://GFX/Loot/suitcase.png"
 
 var box_occluder = "res://Scenes/Characters/BoxOccluder.tres"
 var player_occluder = "res://Scenes/Characters/CharacterOccluder.tres"

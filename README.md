@@ -354,3 +354,13 @@ Use ``ItemList`` nodes to make polished GUI elements easily
 
 #### After watching (learning outcomes)…
 Create an inventory system in the SceneTree
+
+
+### 32 Making a GUI for the Loot
+#### In this video (objectives)…
+
+1 Create a GUI element that only appears when it's needed
+2 Show the player that they're collected loot
+
+#### After watching (learning outcomes)…
+Finish the GUI system!
