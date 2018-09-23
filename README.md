@@ -364,3 +364,13 @@ Create an inventory system in the SceneTree
 
 #### After watching (learning outcomes)…
 Finish the GUI system!
+
+
+### 33 Polishing the Game
+#### In this video (objectives)…
+
+1 Load a scene as a singleton
+2 Create Game Over and Victory screens
+
+#### After watching (learning outcomes)…
+Add polish to our game with consistent background music and the ability to retry or quit the game.

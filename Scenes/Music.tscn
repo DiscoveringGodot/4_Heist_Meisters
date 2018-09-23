@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SFX/Music/StealthintheWoods.ogg" type="AudioStream" id=1]
+
+[node name="Music" type="AudioStreamPlayer" index="0"]
+
+stream = ExtResource( 1 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+
