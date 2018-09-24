@@ -374,3 +374,13 @@ Finish the GUI system!
 
 #### After watching (learning outcomes)…
 Add polish to our game with consistent background music and the ability to retry or quit the game.
+
+
+### 34 Preparing the Tutorial Level
+#### In this video (objectives)…
+
+1 Designing a Tutorial
+2 Creating a level for a tutorial
+
+#### After watching (learning outcomes)…
+Lay the foundations of our game's tutorial
