@@ -384,3 +384,13 @@ Add polish to our game with consistent background music and the ability to retry
 
 #### After watching (learning outcomes)…
 Lay the foundations of our game's tutorial
+
+
+### 35 Adding Objective Markers
+#### In this video (objectives)…
+
+1 Create a visual objective marker
+2 Move that visual marker to a new position when needed
+
+#### After watching (learning outcomes)…
+Understand how and when to use ``Tween`` nodes and use a parent node as an array
