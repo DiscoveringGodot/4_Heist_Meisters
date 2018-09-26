@@ -394,3 +394,13 @@ Lay the foundations of our game's tutorial
 
 #### After watching (learning outcomes)…
 Understand how and when to use ``Tween`` nodes and use a parent node as an array
+
+
+### 36 Finishing the Tutorial
+#### In this video (objectives)…
+
+1 Adding text to objectives in the tutorial
+2 Using a JSON file to update the objectives
+
+#### After watching (learning outcomes)…
+Finish the tutorial by revisiting JSON files

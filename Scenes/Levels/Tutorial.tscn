@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/FloorTiles.tres" type="TileSet" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=10]
 [ext_resource path="res://GFX/Interface/PNG/crossair_blueOutline.png" type="Texture" id=11]
 [ext_resource path="res://SFX/message.wav" type="AudioStream" id=12]
+[ext_resource path="res://Scenes/TutorialGui.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -111,6 +112,9 @@ editor_draw_drag_margin = false
 
 [node name="VisionMode" parent="." index="4" instance=ExtResource( 6 )]
 
+visible = true
+color = Color( 0.0132751, 0.0338645, 0.113281, 1 )
+
 [node name="Briefcase" parent="." index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 1054.63, 724.365 )
@@ -178,8 +182,6 @@ _sections_unfolded = [ "Shadow", "Transform" ]
 
 [node name="ObjectiveMarkers" type="Node2D" parent="." index="9"]
 
-editor/display_folded = true
-
 [node name="MoveObjective" type="Position2D" parent="ObjectiveMarkers" index="0"]
 
 position = Vector2( 667.038, 150.693 )
@@ -202,7 +204,6 @@ position = Vector2( 691.525, 330.263 )
 
 [node name="ObjectiveAreas" type="Node2D" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 691.525, 330.263 )
 
 [node name="ObjectiveMove" type="Area2D" parent="ObjectiveAreas" index="0"]
@@ -311,6 +312,8 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="TutorialGui" parent="." index="14" instance=ExtResource( 13 )]
 
 [connection signal="body_entered" from="Briefcase" to="." method="_on_Briefcase_body_entered"]
 

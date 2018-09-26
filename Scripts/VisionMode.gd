@@ -1,6 +1,6 @@
 extends CanvasModulate
 
-const DARK = Color("0f1d53")
+const DARK = Color("03081c")
 const NIGHTVISION = Color("2bc92b")
 
 func _ready():
