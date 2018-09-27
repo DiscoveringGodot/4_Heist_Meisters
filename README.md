@@ -404,3 +404,14 @@ Understand how and when to use ``Tween`` nodes and use a parent node as an array
 
 #### After watching (learning outcomes)…
 Finish the tutorial by revisiting JSON files
+
+
+### 37 The Final Polishing of Heist Meisters!
+#### In this video (objectives)…
+
+1 Plug the tutorial into the game
+2 Fix the tutorial GUI position changing
+3 Animate the tutorial GUI
+
+#### After watching (learning outcomes)…
+Finish Heist Meisters!

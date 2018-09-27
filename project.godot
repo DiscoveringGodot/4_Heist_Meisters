@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="3_Heist_Meisters"
-run/main_scene="res://Scenes/Levels/Level1.tscn"
+run/main_scene="res://Scenes/Levels/SplashScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
