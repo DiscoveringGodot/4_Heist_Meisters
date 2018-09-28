@@ -415,3 +415,13 @@ Finish the tutorial by revisiting JSON files
 
 #### After watching (learning outcomes)…
 Finish Heist Meisters!
+
+
+### 38 Wrapping up Heist Meisters
+#### In this video (objectives)…
+
+1 Recap some of what we've learned
+2 Look at where this project could go from here
+
+#### After watching (learning outcomes)…
+Look at what we've learned to make this projevt happen and where we could go from here
